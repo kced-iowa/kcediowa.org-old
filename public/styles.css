@@ -1,22 +1,11 @@
 body {
     margin: 0;
+    background-color: #1d1d1d;
+    color: #fff;
 }
-.navbar {
+.navbar-cont {
+    width: 100vw;
     display: flex;
     align-items: center;
-    padding: 0px 10px 0px 10px;
-    color: #2aaf73;
-    height: 2.5rem;
-}
-.navbar a {
-    text-decoration: underline;
-    color: #2aaf73;
-}
-.landing {
-    height: 100vh;
-    background: rgb(42,175,115);
-    background: linear-gradient(90deg, rgba(42,175,115,1) 0%, rgba(42,169,175,1) 86%);
-}
-.section {
-    height: 100vh;
+    justify-content: space-between;
 }

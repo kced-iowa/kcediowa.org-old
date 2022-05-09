@@ -1,11 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;600&display=swap');
 body {
     margin: 0;
     background-color: #1d1d1d;
     color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
 }
+.landing {
+    height: 100vh;
+}
+/* navbar */
 .navbar-cont {
-    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    padding: 0px 30px 0px 10px;
+}
+.nav-list {
+    box-sizing: border-box;
+}
+.nav-list ul {
+    margin: 0;
+}
+.nav-list li {
+    display: inline;
+}
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+/* landing text */
+.content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.top {
+    font-size: 1rem;
+}
+.bottom {
+    font-size: 3rem;
 }

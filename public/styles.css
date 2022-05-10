@@ -5,45 +5,41 @@ body {
     color: #fff;
     font-family: 'Lexend Deca', sans-serif;
 }
-.landing {
-    height: 100vh;
-}
 /* navbar */
-.navbar-cont {
+.navbar {
+    height: 2rem;
+    padding: 0px 10px 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
-    padding: 0px 30px 0px 10px;
 }
-.nav-list {
-    box-sizing: border-box;
+.navbar ul {
+    list-style: none;
 }
-.nav-list ul {
-    margin: 0;
-}
-.nav-list li {
+.navbar li {
     display: inline;
 }
-.nav-list a {
+.navbar li a {
     color: #fff;
     text-decoration: none;
 }
-/* landing text */
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.text {
+/* landing */
+.text-container {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
-.top {
-    font-size: 1rem;
+.text-bottom {
+    font-size: 2rem;
 }
-.bottom {
-    font-size: 3rem;
+/* landing button */
+.button-container {
+    height: 2rem;
+    width: 5rem;
+    background-color: #fff;
 }

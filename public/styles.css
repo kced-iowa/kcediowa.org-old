@@ -26,6 +26,10 @@ body {
     color: #fff;
     text-decoration: none;
 }
+.navbar li a:hover {
+    color: #2aa9af;
+    transition: all 0.2s ease;
+}
 /* landing */
 .text-container {
     display: flex;
@@ -45,13 +49,50 @@ body {
 }
 /* landing button */
 .button-container {
+    color: #fff;
+    text-decoration: none;
     position: absolute;
     bottom: 10%;
     border: 1px solid;
-    width: 400px;
-    height: 100px;
+    width: 260px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/* sections */
-section {
-    height: 100vh;
+.button-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 240px;
+    border: 1px solid;
+    border-color: #fff;
+    text-decoration: none;
+}
+.button-container a:hover {
+    background-color: #2aa9af;
+    transition: all 0.2s ease;
+}
+.button-container span {
+    color: #fff;
+}
+/* about section */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+}
+.about-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5em;
+}
+.about-text span {
+    padding-bottom: 1.5vw;
+}
+.placeholder {
+    width: 30%;
+    border-bottom: 1px solid;
 }

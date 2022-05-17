@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;600&display=swap');
 body {
     margin: 0;
+    color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.landing {
+    height: 100vh;
+    background-color: #1d1d1d;
+}
+.top-navbar {
+
+}
+.bottom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom-navbar li {
+    display: inline;
+}
+.bottom-navbar li a {
+    color: #fff;
+    text-decoration: underline;
 }

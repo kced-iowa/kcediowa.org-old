@@ -8,18 +8,16 @@ body {
     height: 100vh;
     background-color: #1d1d1d;
 }
-.top-navbar {
-
-}
-.bottom-navbar {
+.navbar {
+    padding: 0 10px 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.bottom-navbar li {
+.navbar li {
     display: inline;
 }
-.bottom-navbar li a {
+.navbar li a {
     color: #fff;
     text-decoration: underline;
 }

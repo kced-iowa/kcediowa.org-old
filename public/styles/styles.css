@@ -7,9 +7,11 @@ body {
 .landing {
     height: 100vh;
     background-color: #1d1d1d;
+    overflow: hidden;
 }
 .navbar {
-    padding: 0 10px 0 10px;
+    height: 2rem;
+    padding: 0 10px 20px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,4 +22,54 @@ body {
 .navbar li a {
     color: #fff;
     text-decoration: underline;
+}
+.navbar li a:hover {
+    color: #2aa9af;
+    transition: all 0.2s ease;
+}
+.landing-content {
+    height: 100%;
+}
+.landing-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+    float: right;
+    height: 100%;
+}
+.search-box {
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    background-color: #fff;
+    height: 50px;
+    width: 425px;
+}
+.search-box input {
+    all: unset;
+    color: #1d1d1d;
+    padding: 10px;
+    width: 100%;
+}
+.ads {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.ad img {
+    height: 100px;
+}
+.landing-text {
+    padding: 0px 0px 20px 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.landing-text-bottom {
+    font-size: 2rem;
 }

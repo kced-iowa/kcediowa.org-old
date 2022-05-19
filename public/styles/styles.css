@@ -6,10 +6,11 @@ body {
 }
 .landing {
     height: 100vh;
-    background-color: #1d1d1d;
-    overflow: hidden;
+    background-image: url("/public/img/city.jpg");
+    background-size: cover;
 }
 .navbar {
+    z-index: 9999;
     height: 2rem;
     padding: 0 10px 20px 10px;
     display: flex;
@@ -27,16 +28,11 @@ body {
     color: #2aa9af;
     transition: all 0.2s ease;
 }
-.landing-content {
-    height: 100%;
-}
 .landing-content-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding-right: 20px;
     float: right;
-    height: 100%;
 }
 .search-box {
     display: flex;
@@ -59,10 +55,11 @@ body {
     padding: 10px;
 }
 .ad img {
+    border-radius: 6px;
     height: 100px;
 }
 .landing-text {
-    padding: 0px 0px 20px 20px;
+    padding: 0 0 20px 20px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -71,5 +68,38 @@ body {
     align-items: center;
 }
 .landing-text-bottom {
-    font-size: 2rem;
+    font-size: 2em;
+}
+.divider {
+    margin: 5px 0 20px 0;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+}
+.quick-links-header {
+    font-size: 1.5rem;
+}
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.icon-container a {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+/* FOOTER FOOTER FOOTER */
+.footer {
+    background-color: #1d1d1d;
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

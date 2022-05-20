@@ -3,19 +3,20 @@ body {
     margin: 0;
     color: #fff;
     font-family: 'Lexend Deca', sans-serif;
-}
-.landing {
-    height: 100vh;
     background-image: url("/public/img/city.jpg");
     background-size: cover;
 }
+/* NAVBAR NAVBAR NAVBAR */
 .navbar {
     z-index: 9999;
+    position: absolute;
     height: 2rem;
-    padding: 0 10px 20px 10px;
+    width: 100%;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
 }
 .navbar li {
     display: inline;
@@ -28,12 +29,29 @@ body {
     color: #2aa9af;
     transition: all 0.2s ease;
 }
+/* LANDING LANDING LANDING */
+.landing-content {
+    height: 100vh;
+}
 .landing-content-right {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding-right: 20px;
     float: right;
+    height: 100%;
 }
+/* landing text */
+.landing-text {
+    padding: 0 0 20px 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* search bar / ads */
 .search-box {
     display: flex;
     flex-direction: row;
@@ -58,18 +76,13 @@ body {
     border-radius: 6px;
     height: 100px;
 }
-.landing-text {
-    padding: 0 0 20px 20px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.landing-text-top {
+    font-size: 1.25vw;
 }
 .landing-text-bottom {
-    font-size: 2em;
+    font-size: 3vw;
 }
+/* quick links */
 .divider {
     margin: 5px 0 20px 0;
     height: 1px;
@@ -93,6 +106,9 @@ body {
     text-decoration: none;
     color: #fff;
 }
+.icon-container a img {
+    filter: invert(93%) sepia(0%) saturate(26%) hue-rotate(61deg) brightness(107%) contrast(106%);
+}
 /* FOOTER FOOTER FOOTER */
 .footer {
     background-color: #1d1d1d;
@@ -101,5 +117,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+.footer a {
+    color: #fff;
 }

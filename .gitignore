@@ -1,3 +1,8 @@
-/.idea
-/.nuxt
-/node_modules
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist

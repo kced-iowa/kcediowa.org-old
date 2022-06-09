@@ -1,0 +1,16 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 14px;
+}
+.navbar-container ul {
+    list-style: none;
+}
+.navbar-container ul li {
+    display: inline;
+}
+.navbar-container ul li a {
+    color: #fff;
+}

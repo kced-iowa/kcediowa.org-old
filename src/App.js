@@ -1,10 +1,14 @@
+import Navbar from './components/default/Navbar.js';
 import './App.css';
 
 function App() {
   return (
-    <div class="h-screen bg-black">
+    <>
+      <Navbar />
+      <div className="landing-container">
 
-    </div>
+      </div>
+    </>
   );
 }
 

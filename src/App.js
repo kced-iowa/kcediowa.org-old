@@ -7,10 +7,10 @@ function App() {
       <Navbar />
       <div className="landing-container">
         <div className="landing-text">
-          <span>&mdash; Welcome to &mdash;</span>
-          <span>Sigourney Area Development Corporation</span>
+          <span className="text-top">&mdash; Welcome to &mdash;</span>
+          <span className="text-bottom">Sigourney Area Development Corporation</span>
         </div>
-        <div>
+        <div className="landing-side-container">
 
         </div>
       </div>

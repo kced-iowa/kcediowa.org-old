@@ -5,6 +5,9 @@
     padding: 10px;
 }
 .landing-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;

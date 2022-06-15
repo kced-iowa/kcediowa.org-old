@@ -1,12 +1,17 @@
-# Sigourney Area Development Corporation Redo Changelog v1.10
+# Sigourney Area Development Corporation Website Redo v1.11
 ## Main Changes:
 <ul>
-    <li>Removed TailwindCSS, personal preference + allows for more maintainability</li>
-    <li>Added placeholder taskbar</li>
+    <li>Finished homepage (search bar is obviously not working, needs proper linking + advertisements (append????)</li>
+    <li>Preparing for backend implementation</li>
 </ul>
 
-## Imediate Todo
+## Immediate Todo
 <ul>
-    <li>Find suitable font</li>
-    <li>Finish landind page</li>
+    <li>Need images of the city</li>
+    <li>Need advertisements, still might just append</li>
+    <li>Compartmentalize</li>
+    <li>Icons??</li>
+    <li>Set up the backend once permanant server is established</li>
+    <li>Transfer DNS to cloudflare</li>
+    <li>Get the site up running asap</li>
 </ul>

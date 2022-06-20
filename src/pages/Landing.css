@@ -1,8 +1,6 @@
-body {
-    background-image: url(./assets/img/City.jpg);
-    background-size: cover;
-}
 .landing {
+    background-image: url(../assets/img/City.jpg);
+    background-size: cover;
     height: 100vh;
 }
 .side-container {
@@ -97,4 +95,7 @@ body {
 }
 .link-icon {
     font-size: 5em;
+}
+.link span {
+    white-space: nowrap;
 }

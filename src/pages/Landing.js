@@ -1,11 +1,14 @@
-import Navbar from './components/default/Navbar.js';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
-
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import './Landing.css';
 // icon imports
-import { HiArrowCircleDown } from 'react-icons/hi';
+import { BsNewspaper } from 'react-icons/bs';
+import { IoBusinessOutline } from 'react-icons/io5';
+import { BsCalendarCheck } from 'react-icons/bs';
 
-function App() {
+function Landing() {
 
   const submitHandler = () => {
     alert('Search query');
@@ -54,25 +57,25 @@ function App() {
             <div className="link-spacer" />
             <div className="link-container">
               <div className="link">
-                <Link to="/">
+                <Link to="/news">
                   <div className="link-icon">
-                    <><HiArrowCircleDown /></>
+                    <><BsNewspaper /></>
                   </div>
-                  <span>Placeholder</span>
+                  <span>News</span>
                 </Link>
               </div>
               <div className="link">
-                <Link to="/">
+                <Link to="/business">
                   <div className="link-icon">
-                    <><HiArrowCircleDown /></>
+                    <><IoBusinessOutline /></>
                   </div>
-                  <span>Placeholder</span>
+                  <span>Business Information</span>
                 </Link>
               </div>
               <div className="link">
-                <Link to="/">
+                <Link to="/events">
                   <div className="link-icon">
-                    <><HiArrowCircleDown /></>
+                    <><BsCalendarCheck /></>
                   </div>
                   <span>Placeholder</span>
                 </Link>
@@ -81,8 +84,9 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
 
-export default App;
+export default Landing;

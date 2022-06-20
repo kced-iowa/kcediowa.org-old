@@ -1,0 +1,18 @@
+.about-container {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+.about-title {
+    height: 100px;
+    width: 300px;
+    font-size: 3rem;
+}
+.about-text {
+    padding-left: 20px;
+    width: 50%;
+}
+.seperator {
+    padding-top: 2px;
+    border-bottom: 1px solid #fff;;
+}

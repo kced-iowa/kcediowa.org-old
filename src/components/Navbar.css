@@ -7,13 +7,13 @@
     position: fixed;
     padding: 10px;
     box-sizing: border-box;
-}   
+}
+.navbar-container a {
+    color: #fff;
+} 
 .navbar-container ul {
     list-style: none;
 }
 .navbar-container ul li {
     display: inline;
-}
-.navbar-container ul li a {
-    color: #fff;
 }

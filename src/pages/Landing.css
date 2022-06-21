@@ -1,7 +1,7 @@
 .landing {
     background-image: url(../assets/img/City.jpg);
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 .side-container {
     height: 100%;

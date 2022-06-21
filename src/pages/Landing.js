@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './Landing.css';
 // icon imports
-import { BsNewspaper } from 'react-icons/bs';
+import { IoIosInformationCircleOutline } from 'react-icons/io';
 import { IoBusinessOutline } from 'react-icons/io5';
-import { BsCalendarCheck } from 'react-icons/bs';
+import { BsFillPinMapFill } from 'react-icons/bs'
 
 function Landing() {
 
@@ -57,11 +57,11 @@ function Landing() {
             <div className="link-spacer" />
             <div className="link-container">
               <div className="link">
-                <Link to="/news">
+                <Link to="/about">
                   <div className="link-icon">
-                    <><BsNewspaper /></>
+                    <><IoIosInformationCircleOutline /></>
                   </div>
-                  <span>News</span>
+                  <span>About Us</span>
                 </Link>
               </div>
               <div className="link">
@@ -73,11 +73,11 @@ function Landing() {
                 </Link>
               </div>
               <div className="link">
-                <Link to="/events">
+                <Link to="/visit">
                   <div className="link-icon">
-                    <><BsCalendarCheck /></>
+                    <><BsFillPinMapFill /></>
                   </div>
-                  <span>Placeholder</span>
+                  <span>Visit</span>
                 </Link>
               </div>
             </div>

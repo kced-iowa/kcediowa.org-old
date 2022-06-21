@@ -1,7 +1,9 @@
+.about {
+    min-height: 100vh;
+}
 .about-container {
-    position: absolute;
-    top: 10%;
-    left: 20%;
+    padding-top: 10vh;
+    padding-left: 25vw;
 }
 .about-title {
     height: 100px;

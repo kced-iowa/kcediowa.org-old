@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className="navbar-container">
             <Link to="/">SADC</Link>
-            <ul class="list-none">
+            <ul>
                 <li><Link to="/">Home</Link></li>
                 <span> | </span>
                 <li><Link to="/about">About</Link></li>

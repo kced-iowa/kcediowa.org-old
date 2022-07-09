@@ -12,9 +12,22 @@
 }
 .about-text {
     padding-left: 20px;
+    padding-bottom: 20px;
     width: 50%;
+}
+.about-text span {
+    display: block;
+    line-height: 1.5;
+    padding-bottom: 15px;
 }
 .seperator {
     padding-top: 2px;
     border-bottom: 1px solid #fff;;
+}
+.member-list {
+    padding-left: 20px;
+    list-style: none;
+}
+.subtitle {
+    font-size: .75rem;
 }

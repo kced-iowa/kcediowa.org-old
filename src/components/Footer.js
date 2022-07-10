@@ -9,7 +9,7 @@ function Footer(){
             <div className="footer-content"> 
                 <span>Made with {'<3'} by <a href="https://github.com/prjctmatka/" target="_blank" rel="noopener noreferrer">The Matka Project</a></span>
                 <br />
-                <span><a href="https://github.com/prjctmatka/sigourney.com" target="_blank" rel="noopener noreferrer">Contribute to this website</a></span>
+                <span><a href="https://github.com/prjctmatka/sigourney.com" target="_blank" rel="noopener noreferrer">Contribute to this website</a> | <a href="https://wiki.sigourney.com">Dev Wiki</a></span>
             </div>
             <div className="footer-content">
                 <span>© 2022 Sigourney Area Development Corporation</span>

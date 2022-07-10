@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillFacebook } from 'react-icons/ai'
+import { AiFillInstagram } from 'react-icons/ai'
 import './Footer.css';
 
 function Footer(){
@@ -20,7 +21,8 @@ function Footer(){
                 <a href="https://admin.sigourney.com">Administration</a>
             </div>
             <div className="footer-content">
-                <a className="facebook" href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
+                <a className="icon" href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
+                <a className="icon" href="https://www.instagram.com/sadc_52591/"><AiFillInstagram /></a>
             </div>
         </div>
     );

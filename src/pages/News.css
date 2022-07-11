@@ -1,3 +1,39 @@
 .news {
     min-height: 100vh;
 }
+.news-container {
+    padding-top: 10vh;
+    padding-left: 25vw;
+}
+.news-title {
+    height: 100px;
+    width: 300px;
+    font-size: 3rem;
+}
+.news-card {
+    position: relative;
+    height: 400px;
+    width: 350px;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+.news-card-header {
+    font-size: 40px;
+}
+.news-card-text {
+    max-height: 250px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    text-overflow: ellipsis;
+}
+.news-card-button {
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

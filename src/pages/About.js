@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Seperator from '../components/Seperator';
 import './About.css';
 
 const About = ()  => {
@@ -49,7 +50,7 @@ const About = ()  => {
                     </div>
                     <div className="about-title">
                         <span>Members</span>
-                        <div className="seperator" />
+                        <Seperator />
                     </div>
                     {members.map((member) =>
                         <ul className="member-list" key={member.id}>

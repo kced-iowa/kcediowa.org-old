@@ -1,39 +1,57 @@
 .news {
     min-height: 100vh;
 }
-.news-container {
+.news-title {
     padding-top: 10vh;
     padding-left: 25vw;
-}
-.news-title {
     height: 100px;
     width: 300px;
     font-size: 3rem;
 }
+.news-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 15vw 0;
+}
 .news-card {
-    position: relative;
+    box-sizing: inherit;
     height: 400px;
     width: 350px;
     border: 3px solid #fff;
     border-radius: 8px;
     padding: 10px;
+    margin: 10px;
 }
 .news-card-header {
     font-size: 40px;
 }
 .news-card-text {
-    max-height: 250px;
+    max-height: 215px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-    text-overflow: ellipsis;
+    -webkit-line-clamp: 10;
 }
 .news-card-button {
-    position: absolute;
-    bottom: 0;
     width: inherit;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.news-card-button button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 250px;
+}
+.news-card-button button:hover {
+    background-color: #908298;
+    transition: all 0.2s ease;
+}
+.news-card-button span {
+    font-size: 14px;
 }

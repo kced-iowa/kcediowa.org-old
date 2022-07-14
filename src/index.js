@@ -16,6 +16,7 @@ import News from './pages/News';
 import NewsPage from './pages/NewsPage';
 import Orgs from './pages/Orgs';
 import Visit from './pages/Visit';
+import NotFound from './pages/NotFound404';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
       <Route path="/news/:id" element={<NewsPage />} />
       <Route path="/orgs" element={<Orgs />} />
       <Route path="/visit" element={<Visit />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 );

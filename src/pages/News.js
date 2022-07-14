@@ -33,7 +33,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/0">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>
@@ -57,7 +57,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/1">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>
@@ -81,7 +81,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/2">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>
@@ -105,7 +105,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/3">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>
@@ -129,7 +129,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/4">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>
@@ -153,7 +153,7 @@ function News() {
                                 </span>
                             </div>
                             <div className="news-card-button">
-                                <Link to="/">
+                                <Link to="/news/5">
                                     <button>
                                         <span>Learn More</span> 
                                     </button>

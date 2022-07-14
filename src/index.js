@@ -13,6 +13,7 @@ import About from './pages/About';
 import Business from './pages/Business';
 import Events from './pages/Events';
 import News from './pages/News';
+import NewsPage from './pages/NewsPage';
 import Orgs from './pages/Orgs';
 import Visit from './pages/Visit';
 
@@ -25,6 +26,7 @@ root.render(
       <Route path="/business" element={<Business />} />
       <Route path="/events" element={<Events />} />
       <Route path="/news" element={<News />} />
+      <Route path="/news/:id" element={<NewsPage />} />
       <Route path="/orgs" element={<Orgs />} />
       <Route path="/visit" element={<Visit />} />
     </Routes>

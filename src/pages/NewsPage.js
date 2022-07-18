@@ -1,10 +1,30 @@
-import { React, Link, useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from "axios";
+import Seperator from '../components/Seperator';
+import Footer from '../components/Footer';
 import './NewsPage.css';
 
 function NewsPage() {
     return (
-        <span>It works !!</span>
+        <div>
+            <div className="news-page">
+                <Link to='/news'>
+                    <span>{"< Return"}</span> 
+                </Link>
+                <div className="heading">
+                    <span>SADC to replace CFO</span>
+                    <Seperator />
+                </div>
+                <div className="date-auth">
+                    <span>SADC</span><span> | </span><span>Jan 1, 1970</span>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <Footer />
+        </div>
     )
 }
 

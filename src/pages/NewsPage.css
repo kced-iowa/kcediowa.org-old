@@ -1,0 +1,10 @@
+.news-page {
+    min-height: 100vh;
+}
+.date-auth {
+    padding-top: 5px;
+    color: rgb(172, 171, 171);
+}
+.heading {
+    font-size: 3rem;
+}

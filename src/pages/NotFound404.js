@@ -3,7 +3,7 @@ import './NotFound404.css';
 
 function NotFound(){
     return (
-        <div>
+        <div className="not-found-container">
             <div className="top">
                 <span>404</span>
             </div>

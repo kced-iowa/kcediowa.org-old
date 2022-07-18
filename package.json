@@ -20,6 +20,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
+    "api": "cd D:/Code/api.sigourney.com && npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

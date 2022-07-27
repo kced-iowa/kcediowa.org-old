@@ -6,10 +6,9 @@ import './Footer.css';
 function Footer(){
     return (
         <div className="footer-container">
-            <div className="footer-content"> 
-                <span>Made with {'<3'} by <a href="https://github.com/prjctmatka/" target="_blank" rel="noopener noreferrer">The Matka Project</a></span>
-                <br />
-                <span><a href="https://github.com/prjctmatka/sigourney.com" target="_blank" rel="noopener noreferrer">Contribute to this website</a> | <a href="https://wiki.sigourney.com">Dev Wiki</a></span>
+            <div className="footer-content">
+                <span><a href="https://github.com/horsaen/sigourney.com" target="_blank" rel="noopener noreferrer">Contribute to This Website</a><span className="green"> | </span><a href="https://wiki.sigourney.com">Dev Wiki</a></span>
+                <span>Made with {'<3'} by <a href="https://horsaen.com" target="_blank" rel="noopener noreferrer">Cameron W</a></span>
             </div>
             <div className="footer-content">
                 <span>© 2022 Sigourney Area Development Corporation</span>
@@ -17,7 +16,7 @@ function Footer(){
                 <a href="mailto:sadc@sigourney.com">sadc@sigourney.com</a>
             </div>
             <div className="footer-content">
-                <a href="https://partners.sigourney.com/">For partners</a>
+                <a href="https://partners.sigourney.com/">Partners</a>
                 <a href="https://admin.sigourney.com">Administration</a>
             </div>
             <div className="footer-content">

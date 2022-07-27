@@ -7,9 +7,11 @@
     position: fixed;
     padding: 10px;
     box-sizing: border-box;
+    color: #000;
+    z-index: 999;
 }
 .navbar-container a {
-    color: #fff;
+    color: #000;
 } 
 .navbar-container ul {
     list-style: none;

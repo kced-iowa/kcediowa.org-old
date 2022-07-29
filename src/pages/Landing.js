@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { InstantSearch, SearchBox, Hits, Highlight } from 'react-instantsearch-dom';
+import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './Landing.css';
@@ -9,12 +11,6 @@ import { IoBusinessOutline } from 'react-icons/io5';
 import { BsFillPinMapFill } from 'react-icons/bs'
 
 function Landing() {
-
-  const submitHandler = () => {
-    alert('Search query');
-  }
-
-
   // declare ad images - replace with api sooner or later
   const adImage0 = 'https://upload.wikimedia.org/wikipedia/commons/6/62/Solid_red.svg';
   const adImage1 = 'https://upload.wikimedia.org/wikipedia/commons/2/29/Solid_green.svg';
@@ -27,7 +23,9 @@ function Landing() {
 
   return (
     <div>
-      <Navbar />
+      <div className="landing-navbar">
+        <Navbar />
+      </div>
       <div className="landing">
         <div className="landing-text">
           <span className="landing-text-top">&mdash; Welcome To &mdash;</span>
@@ -36,7 +34,7 @@ function Landing() {
         <div className="side-container">
           <div className="coupling-container">
             <div className="search">
-              <form onSubmit={submitHandler}>
+              <form>
                 <input type="text" className="search-input" placeholder="Search something incredible..." />
               </form>
             </div>

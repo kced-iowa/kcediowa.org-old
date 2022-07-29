@@ -1,3 +1,9 @@
+.landing-navbar span {
+    color: #fff;
+}
+.landing-navbar a {
+    color: #fff;
+}
 .landing {
     background-image: url(../assets/img/City.jpg);
     background-size: cover;

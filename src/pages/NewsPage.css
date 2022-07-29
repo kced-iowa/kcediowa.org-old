@@ -1,10 +1,15 @@
 .news-page {
     min-height: 100vh;
 }
+.news-top {
+    padding-top: 50px;
+}
 .date-auth {
     padding-top: 5px;
-    color: rgb(172, 171, 171);
+    padding-left: 10px;
+    color: #3b3b3b;
 }
 .heading {
+    padding-left: 10px;
     font-size: 3rem;
 }

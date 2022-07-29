@@ -12,7 +12,7 @@ function News() {
             <div className="news">
                 <div className="news-container">
                     <div className="news-title">
-                        <span>What's New</span>
+                        <span>News</span>
                         <Seperator />
                     </div>
                     <div className="news-content">
@@ -21,7 +21,7 @@ function News() {
                                 <span>SADC | Jan 1, 1970</span> 
                             </div>
                             <div className="news-card-header">
-                                <span>SADC to replace CFO</span>
+                                <span>AMONG US BALLS</span>
                             </div>
                             <div className="news-card-text">
                                 <span>

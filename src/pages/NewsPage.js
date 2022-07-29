@@ -12,15 +12,14 @@ function NewsPage() {
                 <Link to='/news'>
                     <span>{"< Return"}</span> 
                 </Link>
-                <div className="heading">
-                    <span>SADC to replace CFO</span>
+                <div className="news-top">
+                    <div className="heading">
+                        <span>SADC to replace CFO</span>
+                    </div>
                     <Seperator />
-                </div>
-                <div className="date-auth">
-                    <span>SADC</span><span> | </span><span>Jan 1, 1970</span>
-                </div>
-                <div>
-
+                    <div className="date-auth">
+                        <span>SADC</span><span> | </span><span>Jan 1, 1970</span>
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -41,7 +41,7 @@ const About = ()  => {
                 <div className="about-container">
                     <div className="about-title">
                         <span>About Us</span>
-                        <div className="seperator" />
+                        <Seperator />
                     </div>
                     <div className="about-text">
                         {about.map((about) =>

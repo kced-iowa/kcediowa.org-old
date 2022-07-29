@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;600&display=swap');
+* {
+  text-rendering: optimizeLegibility;
+}
 body {
   margin: 0;
   background-color: #fff;

@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 14px; 
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+    z-index: 999;
+}
+.container a {
+    color: #000;
+} 
+.ncontainer ul {
+    list-style: none;
+}
+.container ul li {
+    display: inline;
+}

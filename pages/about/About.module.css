@@ -1,0 +1,29 @@
+.about {
+    min-height: 100vh;
+}
+.container {
+    padding-top: 10vh;
+    padding-left: 25vw;
+}
+.title {
+    height: 100px;
+    width: 300px;
+    font-size: 3rem;
+}
+.text {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    width: 50%;
+}
+.text span {
+    display: block;
+    line-height: 1.5;
+    padding-bottom: 15px;
+}
+.list {
+    padding-left: 20px;
+    list-style: none;
+}
+.subtitle {
+    font-size: .75rem;
+}

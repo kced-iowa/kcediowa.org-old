@@ -21,8 +21,33 @@
     padding-bottom: 15px;
 }
 .list {
-    padding-left: 20px;
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1900px;
+}
+.member {
+    display: flex;
+    padding: 15px;
+    min-width: 400px;
+}
+.memberSidebar {
+    height: 80px;
+    width: 3px;
+    margin-right: 5px;
+    background-color: #c7dde8;
+}
+.memberImage {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    margin-right: 5px;
+}
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    height: 80px;
 }
 .subtitle {
     font-size: .75rem;

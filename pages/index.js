@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -22,6 +23,9 @@ function Home() {
 
   return (
     <div>
+      <Head>
+        <title>Sigourney Area Development Corporation</title>
+      </Head>
       <div className={styles.landingNavbar}>
         <Navbar />
       </div>

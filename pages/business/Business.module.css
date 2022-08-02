@@ -79,6 +79,7 @@
     color: #c7dde8;
 }
 .cardButton {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

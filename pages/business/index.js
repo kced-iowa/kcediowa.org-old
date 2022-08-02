@@ -55,7 +55,7 @@ function Business() {
                                     </div>
                                 </div>
                             </div>
-                            <Link href="/">
+                            <Link href="/business/1">
                                 <div className={styles.cardButton}>
                                     <a><span>Learn More</span></a>
                                 </div>

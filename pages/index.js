@@ -24,7 +24,7 @@ function Home() {
   return (
     <div>
       <Head>
-        <title>Sigourney Area Development Corporation</title>
+        <title>Home | SADC</title>
       </Head>
       <div className={styles.landingNavbar}>
         <Navbar />

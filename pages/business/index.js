@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Image from 'next/image';
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
@@ -12,6 +13,9 @@ import { AiFillInstagram } from 'react-icons/ai';
 function Business() {
     return (
         <div>
+            <Head>
+                <title>Business Directory | SADC</title>
+            </Head>
             <Navbar />
             <div className={styles.business}>
                     <div className={styles.titleContainer}>

@@ -9,7 +9,7 @@ function News() {
     return (
         <div>
             <Head>
-                <title>Sigourney Area Development Corporation</title>
+                <title>News | SADC</title>
             </Head>
             <Navbar />
             <div className={styles.news}>
@@ -28,10 +28,10 @@ function News() {
                             </div>
                             <div className={styles.cardText}>
                                 <span>
-                                    La rébellion de Hōgen (保元の乱, Hōgen no ran?) est une courte guerre civile survenue dans le Japon de l'ère Heian, en l'an 1156 de notre ère. 
-                                    Elle doit son nom au fait qu'elle ait eu lieu durant l'ère Hōgen (1156-1159), et impliqua les trois plus puissants clans de l'époque, les Minamoto, 
-                                    les Taira et les Fujiwara, dans une lutte pour la domination de la cour impériale de Kyoto. La rébellion de Hōgen (保元の乱, Hōgen no ran?) est une courte guerre civile survenue dans le Japon de l'ère Heian, en l'an 1156 de notre ère. 
-                                    Elle doit son nom au fait qu'elle ait eu lieu durant l'ère Hōgen (1156-1159), et impliqua les trois plus puissants clans de l'époque, les Minamoto, 
+                                    La rébellion de Hōgen (保元の乱, Hōgen no ran?) est une courte guerre civile survenue dans le Japon de l&apos;ère Heian, en l&apos;an 1156 de notre ère. 
+                                    Elle doit son nom au fait qu&apos;elle ait eu lieu durant l&apos;ère Hōgen (1156-1159), et impliqua les trois plus puissants clans de l&apos;époque, les Minamoto, 
+                                    les Taira et les Fujiwara, dans une lutte pour la domination de la cour impériale de Kyoto. La rébellion de Hōgen (保元の乱, Hōgen no ran?) est une courte guerre civile survenue dans le Japon de l&apos;ère Heian, en l&apos;an 1156 de notre ère. 
+                                    Elle doit son nom au fait qu&apos;elle ait eu lieu durant l&apos;ère Hōgen (1156-1159), et impliqua les trois plus puissants clans de l&apos;époque, les Minamoto, 
                                     les Taira et les Fujiwara, dans une lutte pour la domination de la cour impériale de Kyoto.
                                 </span>
                             </div>

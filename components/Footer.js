@@ -14,13 +14,12 @@ export default function Footer() {
                 <span>112 East Washington Street • Sigourney, IA 52591-1445 • 641.622.2288</span>
                 <a href="mailto:sadc@sigourney.com">sadc@sigourney.com</a>
             </div>
-            <div className={styles.content}>
-                <a href="https://partners.sigourney.com/">Partners</a>
-                <a href="https://admin.sigourney.com">Administration</a>
-            </div>
-            <div className={styles.content}>
-                <a className={styles.icon} href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
-                <a className={styles.icon} href="https://www.instagram.com/sadc_52591/"><AiFillInstagram /></a>
+            <div className={styles.content} style={{alignItems: 'center'}}>
+                <a href="https://admin.sigourney.com">Console</a>
+                <div className={styles.iconContainer}>
+                    <a className={styles.icon} href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
+                    <a className={styles.icon} href="https://www.instagram.com/sadc_52591/"><AiFillInstagram /></a>
+                </div>
             </div>
         </div>
     );

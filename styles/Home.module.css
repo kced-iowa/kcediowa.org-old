@@ -103,3 +103,17 @@
 .link span {
   white-space: nowrap;
 }
+@media (max-width: 768px) {
+  .sideContainer {
+    display: none;
+  }
+  .landingText {
+    left: 0;
+  }
+  .landingTextTop {
+    font-size: 1.3em;
+  }
+  .landingTextBottom {
+    font-size: 3em;
+  }
+}

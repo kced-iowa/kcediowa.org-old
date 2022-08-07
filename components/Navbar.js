@@ -4,7 +4,9 @@ import styles from './Navbar.module.css';
 export default function Navbar() {
     return (
         <div className={styles.container}>
-            <Link href="/">SADC</Link>
+            <div className={styles.sadc}>
+                <Link href="/">SADC</Link>
+            </div>
             <ul>
                 <li><Link href="/">Home</Link></li>
                 <span> | </span>

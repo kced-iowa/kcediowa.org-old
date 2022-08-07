@@ -19,3 +19,20 @@
 .container ul li {
     display: inline;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+        max-width: 100vw;
+        overflow: hidden;
+        user-select: none;
+        position: fixed;
+        box-sizing: unset;
+    }
+    .container ul {
+        display: none;
+    }
+    .sadc {
+        padding: none;
+    }
+}

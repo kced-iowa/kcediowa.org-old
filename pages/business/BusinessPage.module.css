@@ -1,0 +1,107 @@
+.page {
+    min-height: 100vh;
+}
+.titleContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 1.75em;
+    padding-left: 2em;
+    box-sizing: border-box;
+}
+.titleBar {
+    margin-right: 7px;
+    height: 100px;
+    width: 6px;
+    background-color: #c7dde8;
+}
+.title {
+    padding-left: 5px;
+    font-size: 48px;
+}
+.titleContent {
+    width: 425px;
+}
+.titleType {
+    padding-left: 5px;
+    color: #424040;
+    font-size: 24px;
+}
+.linkContainer {
+    position: absolute;
+    left: 2em;
+    bottom: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.linkContainer a {
+    font-size: 25px;
+    width: fit-content;
+    color: #424040;
+}
+.linkSocials {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.linkSocials a {
+    font-size: 35px;
+    color: #424040;
+}
+.contacts {
+    position: absolute;
+    top: 50vh;
+    padding-left: 2em;
+    padding-top: 1.75em;
+}
+.contactsTitle {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+.contactsCards {
+    padding-left: 30px;
+}
+.contactsCard {
+    position: relative;
+    height: 300px;
+    width: 225px;
+    border-radius: 8px;
+    border: 2px solid #000;
+}
+.cardImage {
+    position: relative;
+    height: 150px;
+    width: 225px;
+}
+.cardContent {
+    padding: 10px;
+}
+.cardTitle {
+    font-size: 22px;
+}
+.cardLinks {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.cardLinks a {
+    font-size: 19px;
+    color: #424040;
+}
+.sideContainer {
+    position: absolute;
+    right: 6em;
+}
+.sideImage {
+    position: relative;
+    height: 394px;
+    width: 700px;
+}
+.sideText {
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 690px;
+}

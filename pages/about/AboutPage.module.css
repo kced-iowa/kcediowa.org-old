@@ -1,0 +1,49 @@
+.content {
+    padding-left: 2em;
+    padding-top: 2em;
+}
+.titleContainer {
+    display: flex;
+}
+.sidebar {
+    height: 300px;
+    width: 6px;
+    background-color: #c7dde8;
+    margin-right: 7px;
+}
+.imageContainer {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+.titleTextContainer {
+    padding-left: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    font-size: 45px;
+}
+.titlePosition {
+    font-size: 20px;
+}
+.titleDate {
+    font-size: 18px;
+}
+.contactContainer {
+    position: absolute;
+    bottom: 2em;
+    left: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.contactContainer a {
+    font-size: 25px;
+    color: #424040;
+}
+.aboutText {
+    position: absolute;
+    right: 200px;
+    width: 400px;
+}

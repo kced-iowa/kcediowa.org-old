@@ -12,7 +12,7 @@ function News() {
                 <title>News | SADC</title>
             </Head>
             <Navbar />
-            <div className={styles.news}>
+            <div className={styles.page}>
                 <div className={styles.container}>
                     <div className={styles.title}>
                         <span>News</span>

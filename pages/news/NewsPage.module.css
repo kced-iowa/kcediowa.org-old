@@ -1,0 +1,24 @@
+.page {
+    min-height: 100vh;
+}
+.titleContainer {
+    padding-top: 1.75em;
+    padding-left: 2em;
+    padding-bottom: 4em;
+    width: 500px;
+}
+.titleContainer span {
+    width: 450px;
+}
+.title {
+    font-size: 45px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.para {
+    width: 70%;
+    padding-bottom: 2em;
+}

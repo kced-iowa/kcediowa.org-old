@@ -24,7 +24,7 @@ function News() {
                                 <span>SADC | Jan 1, 1970</span> 
                             </div>
                             <div className={styles.cardHeader}>
-                                <span>AMONG US BALLS</span>
+                                <span>Very Cool News Thing</span>
                             </div>
                             <div className={styles.cardText}>
                                 <span>
@@ -40,13 +40,6 @@ function News() {
                                     <a><span>Learn More</span></a>
                                 </div>
                             </Link>
-                            {/* <div className="cardButton">
-                                <Link href="/news/0">
-                                    <button>
-                                        <span>Learn More</span> 
-                                    </button>
-                                </Link>
-                            </div> */}
                         </div>
                     </div>
                 </div>

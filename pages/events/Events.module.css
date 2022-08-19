@@ -1,0 +1,54 @@
+.page {
+    min-height: 100vh;
+}
+.title {
+    padding-top: 10vh;
+    padding-left: 25vw;
+    height: 100px;
+    width: 300px;
+    font-size: 3rem;
+}
+.card {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 10px;
+}
+.type {
+    font-size: 35px;
+}
+.date {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.int {
+    font-size: 85px;
+}
+.details {
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 10px;
+    padding-right: 10px;
+}
+.forms {
+    display: flex;
+    justify-content: center;
+}
+.formButton {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+}

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
+import styles from './Orgs.module.css';
 
 function Orgs() {
     return (
@@ -10,7 +11,9 @@ function Orgs() {
                 <title>Clubs & Organizations | SADC</title>
             </Head>
             <Navbar />
-            <div></div>
+            <div className={styles.page}>
+
+            </div>
             <Footer />
         </div>
     )

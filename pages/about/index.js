@@ -8,8 +8,6 @@ import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
 import styles from './About.module.css';
 
-import { MdOutlineOpenInNew } from 'react-icons/md';
-
 const About = () => {
     const [members, setMembers] = useState([]);
     const [about, setAbout] = useState([]);
@@ -19,7 +17,7 @@ const About = () => {
     }, []);
     const fetchAbout = () => {
         axios
-        .get('http://192.168.1.162:5000/api/about/')
+        .get('http://localhost:5000/about')
         .then((res) => {
             console.log(res);
             setAbout(res.data);
@@ -30,7 +28,7 @@ const About = () => {
     };
     const fetchMembers = () => {
         axios
-        .get('http://192.168.1.162:5000/api/members/')
+        .get('http://localhost:5000/members/')
         .then((res) => {
             console.log(res);
             setMembers(res.data);

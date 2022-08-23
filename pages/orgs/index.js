@@ -12,7 +12,12 @@ function Orgs() {
             </Head>
             <Navbar />
             <div className={styles.page}>
-
+                <div className={styles.titleContainer}>
+                    <div className={styles.title}>
+                        <span>Clubs & Organizations</span>
+                        <Seperator />
+                    </div>
+                </div>
             </div>
             <Footer />
         </div>

@@ -1,3 +1,15 @@
 .page {
     min-height: 100vh;
 }
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10vh;
+    padding-left: 25vw;
+}
+.title {
+    height: 100px;
+    width: 400px;
+    font-size: 3rem;
+}

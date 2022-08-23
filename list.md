@@ -1,6 +1,7 @@
 ### TODO
 
-hi pls reconfigure card links to a semantics,,, performance issues without (i think ????)
+hi pls reconfigure card links to a tag semantics,,, performance issues without (i think ????)
+finish api schemas for real-world data
 
 Add API support for:
 - About Page

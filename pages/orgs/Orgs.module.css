@@ -37,3 +37,20 @@
     margin-left: auto; 
     margin-right: auto; 
 }
+.cardContent {
+    padding-top: 10px;
+    margin: 0 5px 5px 5px;
+}
+.cardTitle {
+    font-size: 30px;
+}
+.cardDesc {
+    padding-top: 5px;
+}
+.cardInfo {
+    position: absolute;
+    bottom: 5px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}

@@ -17,7 +17,7 @@ const About = () => {
     }, []);
     const fetchAbout = () => {
         axios
-        .get('http://localhost:5000/about')
+        .get('http://api.horsaen.com/about')
         .then((res) => {
             console.log(res);
             setAbout(res.data);
@@ -28,7 +28,7 @@ const About = () => {
     };
     const fetchMembers = () => {
         axios
-        .get('http://localhost:5000/members/')
+        .get('http://api.horsaen.com/members')
         .then((res) => {
             console.log(res);
             setMembers(res.data);

@@ -5,7 +5,6 @@ finish api schemas for real-world data
 
 Add API support for:
 - About Page
-test
     - Member since date
     - Image
     - Paragraph

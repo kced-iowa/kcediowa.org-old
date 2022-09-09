@@ -5,7 +5,7 @@
   color: #fff;
 }
 .landing {
-  background-image: url(../public/City.jpg);
+  background-image: url(/unnamed.jpg);
   background-size: cover;
   min-height: 100vh;
   color: #fff;
@@ -49,7 +49,7 @@
 .search form {
   display: flex;
   align-items: center;
-  color: #000000;
+  color: #fff;
   background-color: #fff;
   border-radius: 6px;
   height: 6vh;

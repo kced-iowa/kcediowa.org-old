@@ -19,7 +19,7 @@ function AboutPage() {
                 <div className={styles.titleContainer}>
                     <div className={styles.sidebar} />
                     <div className={styles.imageContainer}>
-                        <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill"/>
+                        <Image alt="" src="/Headshot.jpg" layout="fill"/>
                     </div>
                     <div className={styles.titleTextContainer}>
                         <span className={styles.title}>Important person</span>

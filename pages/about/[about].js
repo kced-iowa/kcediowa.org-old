@@ -19,7 +19,7 @@ function AboutPage() {
                 <div className={styles.titleContainer}>
                     <div className={styles.sidebar} />
                     <div className={styles.imageContainer}>
-                        <Image alt="" src="/Headshot.jpg" layout="fill"/>
+                        <Image alt="" src="" layout="fill"/>
                     </div>
                     <div className={styles.titleTextContainer}>
                         <span className={styles.title}>Important person</span>

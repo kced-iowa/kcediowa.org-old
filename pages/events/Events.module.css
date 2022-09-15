@@ -8,6 +8,12 @@
     width: 300px;
     font-size: 3rem;
 }
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 15vw 0;
+}
 .card {
     position: relative;
     height: 400px;

@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import axios from 'axios';
 import Image from 'next/image';
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
@@ -11,6 +13,20 @@ import { AiFillFacebook } from 'react-icons/ai';
 import { AiFillInstagram } from 'react-icons/ai';
 
 function Business() {
+    const [business, setBusiness] = useState([]);
+    useEffect(() => {
+        fetchBusiness();
+    }, []);
+    const fetchBusiness = () => {
+        axios
+        .get('http://localhost:5000/business')
+        .then((res) => {
+            setBusiness(res.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }
     return (
         <div>
             <Head>
@@ -30,21 +46,22 @@ function Business() {
                         </div>
                     </div>
                     <div className={styles.content}>
-                        <div className={styles.card}>
+                    {business.map((business) =>
+                        <div className={styles.card} key={business.id}>
                             <div className={styles.cardImage}>
-                                <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill"/>
+                                <Image alt="business picture" src={'/cdn/businesses/' + business.coverimg} layout="fill"/>
                             </div>
                             <div className={styles.cardSeperator}></div>
                             <div className={styles.cardContent}>
                                 <div className={styles.cardTitle}>
-                                    <span>Super Cool Company LLC</span>
+                                    <span>{business.name}</span>
                                 </div>
                                 <div className={styles.cardClass}>
-                                    <span>Gas Station</span>
+                                    <span>{business.type}</span>
                                 </div>
                                 <div className={styles.cardInfo}>
                                     <div className={styles.cardAbout}>
-                                        <span>eqwerewr  qwerqwherkjkjh lkjhfasdufiasdifuhsjas dfasef asef efsdf sdf asdfasdfk </span>
+                                        <span>eqwerewr  qwerqwherkjkjh lkjhfasdufiasdifuhsjas dfasef asef efsdf sdf asdfasdfk</span>
                                     </div>
                                     <div className={styles.cardIcons}>
                                         <a href="https://facebook.com">
@@ -65,6 +82,7 @@ function Business() {
                                 </div>
                             </Link>
                         </div>
+                    )}
                     </div>
                 </div>
             <Footer />

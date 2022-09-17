@@ -17,9 +17,8 @@ const About = () => {
     }, []);
     const fetchAbout = () => {
         axios
-        .get('http://api.horsaen.com/about')
+        .get('http://localhost:5000/about')
         .then((res) => {
-            console.log(res);
             setAbout(res.data);
         })
         .catch((err) => {
@@ -28,9 +27,8 @@ const About = () => {
     };
     const fetchMembers = () => {
         axios
-        .get('http://api.horsaen.com/members')
+        .get('http://localhost:5000/members')
         .then((res) => {
-            console.log(res);
             setMembers(res.data);
         })
         .catch((err) => {
@@ -65,7 +63,7 @@ const About = () => {
                                     <div className={styles.memberSidebar}>{'<'}</div>
                                 </Link>
                                 <div className={styles.memberImage}>
-                                    <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill" />
+                                    <Image alt="" src={'/cdn/members/' + member.image} layout="fill" />
                                 </div>
                                 <div className={styles.memberInfo}>
                                     <span>{member.name}</span>

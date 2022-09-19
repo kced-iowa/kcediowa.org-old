@@ -7,6 +7,7 @@ import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
 import styles from './About.module.css';
+import { BsCode } from 'react-icons/bs';
 
 const About = () => {
     const [members, setMembers] = useState([]);
@@ -17,22 +18,24 @@ const About = () => {
     }, []);
     const fetchAbout = () => {
         axios
-        .get('http://localhost:5000/about')
+        .get('https://api.horsaen.com/about')
         .then((res) => {
             setAbout(res.data);
         })
         .catch((err) => {
-            console.log(err);
+            // spits out an annoying code, will remain removed unless needed
+            // console.log(err);
         })
     };
     const fetchMembers = () => {
         axios
-        .get('http://localhost:5000/members')
+        .get('https://api.horsaen.com/members')
         .then((res) => {
             setMembers(res.data);
         })
         .catch((err) => {
-            console.log(err);
+            // spits out an annoying code, will remain removed unless needed
+            // console.log(err);
         })
     };
     return (

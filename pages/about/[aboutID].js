@@ -19,12 +19,13 @@ function AboutPage() {
     useEffect(() => {
         const fetchAbout = () => {
             axios
-            .get('http://localhost:5000/members/' + aboutID)
+            .get('https://api.horsaen.com/members/' + aboutID)
             .then((res) => {
                 setAbout(res.data)
             })
             .catch((err) => {
-                console.log(err)
+                // spits out an annoying code, will remain removed unless needed
+                // console.log(err)
             })
         }
         fetchAbout()

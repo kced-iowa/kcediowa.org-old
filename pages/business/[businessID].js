@@ -20,12 +20,13 @@ function BusinessPage() {
     useEffect(() =>{
         const fetchBusiness = () => {
             axios
-            .get('http://localhost:5000/business/' + businessID)
+            .get('https://api.horsaen.com/business/' + businessID)
             .then((res) => {
                 setBusiness(res.data)
             })
             .catch((err) => {
-                console.log(err)
+                // spits out an annoying code, will remain removed unless needed
+                // console.log(err)
             })
         }
         fetchBusiness();

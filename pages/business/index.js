@@ -19,12 +19,13 @@ function Business() {
     }, []);
     const fetchBusiness = () => {
         axios
-        .get('http://localhost:5000/business')
+        .get('https://api.horsaen.com/business')
         .then((res) => {
             setBusiness(res.data);
         })
         .catch((err) => {
-            console.log(err);
+            // spits out an annoying code, will remain removed unless needed
+            // console.log(err);
         })
     }
     return (

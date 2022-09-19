@@ -20,9 +20,8 @@ function AboutPage() {
         const fetchAbout = () => {
             axios
             .get('http://localhost:5000/members/' + aboutID)
-            .then((res) => {console.log(res.data)
+            .then((res) => {
                 setAbout(res.data)
-                
             })
             .catch((err) => {
                 console.log(err)

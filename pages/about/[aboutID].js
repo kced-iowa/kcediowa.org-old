@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,6 +11,25 @@ import { AiFillPhone } from 'react-icons/ai';
 import { FaGlobe } from 'react-icons/fa';
 
 function AboutPage() {
+    
+    const router = useRouter()
+    const { aboutID } = router.query
+
+    const [about, setAbout] = useState([]);
+    useEffect(() => {
+        const fetchAbout = () => {
+            axios
+            .get('http://localhost:5000/members/' + aboutID)
+            .then((res) => {console.log(res.data)
+                setAbout(res.data)
+                
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        }
+        fetchAbout()
+    }, [aboutID])
     return (
         <div className={styles.page}>
             <div>
@@ -19,12 +41,12 @@ function AboutPage() {
                 <div className={styles.titleContainer}>
                     <div className={styles.sidebar} />
                     <div className={styles.imageContainer}>
-                        <Image alt="" src="" layout="fill"/>
+                        <Image alt="" src={'/cdn/members/' + about.image} layout="fill"/>
                     </div>
                     <div className={styles.titleTextContainer}>
-                        <span className={styles.title}>Important person</span>
-                        <span className={styles.titlePosition}>Superintendent of Schools</span>
-                        <span className={styles.titleDate}>Since | 2015</span>
+                        <span className={styles.title}>{about.name}</span>
+                        <span className={styles.titlePosition}>{about.occupation}</span>
+                        <span className={styles.titleDate}>Since | 1970</span>
                     </div>
                 </div>
                 <div className={styles.contactContainer}>
@@ -33,12 +55,7 @@ function AboutPage() {
                     <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a>
                 </div>
                 <div className={styles.aboutText}>
-                    <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </span>
+                    <span>{about.bio}</span>
                 </div>
             </div>
         </div>

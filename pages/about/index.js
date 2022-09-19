@@ -59,7 +59,7 @@ const About = () => {
                     <div className={styles.list}>
                         {members.map((member) =>
                             <div className={styles.member} key={member.id}>
-                                <Link href={'/about/' + member.id}>
+                                <Link href={'/about/' + member._id}>
                                     <div className={styles.memberSidebar}>{'<'}</div>
                                 </Link>
                                 <div className={styles.memberImage}>

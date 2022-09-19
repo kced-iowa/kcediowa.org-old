@@ -32,9 +32,9 @@
     bottom: 50%;
     display: flex;
     flex-direction: column;
+    font-size: 25px;
 }
 .linkContainer a {
-    font-size: 25px;
     width: fit-content;
     color: #424040;
 }

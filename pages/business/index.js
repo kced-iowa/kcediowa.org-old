@@ -76,7 +76,7 @@ function Business() {
                                     </div>
                                 </div>
                             </div>
-                            <Link href="/business/1">
+                            <Link href={"/business/" + business._id}>
                                 <div className={styles.cardButton}>
                                     <a><span>Learn More</span></a>
                                 </div>

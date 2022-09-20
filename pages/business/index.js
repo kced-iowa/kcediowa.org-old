@@ -21,11 +21,11 @@ function Business() {
         axios
         .get('https://api.horsaen.com/business')
         .then((res) => {
+            console.log(res.data);
             setBusiness(res.data);
         })
         .catch((err) => {
-            // spits out an annoying code, will remain removed unless needed
-            // console.log(err);
+            console.log(err)
         })
     }
     return (

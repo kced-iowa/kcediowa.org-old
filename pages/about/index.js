@@ -20,22 +20,22 @@ const About = () => {
         axios
         .get('https://api.horsaen.com/about')
         .then((res) => {
+            console.log(res.data);
             setAbout(res.data);
         })
         .catch((err) => {
-            // spits out an annoying code, will remain removed unless needed
-            // console.log(err);
+            console.log(err)
         })
     };
     const fetchMembers = () => {
         axios
         .get('https://api.horsaen.com/members')
         .then((res) => {
+            console.log(res.data);
             setMembers(res.data);
         })
         .catch((err) => {
-            // spits out an annoying code, will remain removed unless needed
-            // console.log(err);
+            console.log(err)
         })
     };
     return (

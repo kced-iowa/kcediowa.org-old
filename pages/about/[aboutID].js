@@ -24,8 +24,7 @@ function AboutPage() {
                 setAbout(res.data)
             })
             .catch((err) => {
-                // spits out an annoying code, will remain removed unless needed
-                // console.log(err)
+                console.log(err)
             })
         }
         fetchAbout()

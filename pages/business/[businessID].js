@@ -22,11 +22,11 @@ function BusinessPage() {
             axios
             .get('https://api.horsaen.com/business/' + businessID)
             .then((res) => {
+                console.log(res.data);
                 setBusiness(res.data)
             })
             .catch((err) => {
-                // spits out an annoying code, will remain removed unless needed
-                // console.log(err)
+                console.log(err)
             })
         }
         fetchBusiness();

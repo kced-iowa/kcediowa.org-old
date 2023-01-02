@@ -9,12 +9,16 @@
     list-style: none;
     line-height: 30px;
 }
+.sidebar ul li a {
+    color: #000;
+    font-weight: 600;
+}
 .container {
     padding-top: 10vh;
     padding-left: 20vw;
 }
 .title {
-    height: 100px;
+    min-height: 100px;
     width: 300px;
     font-size: 3rem;
 }

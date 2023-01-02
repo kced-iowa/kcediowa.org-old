@@ -77,7 +77,7 @@ const About = () => {
                                         <div className={styles.memberSidebar}>{'<'}</div>
                                     </Link>
                                     <div className={styles.memberImage}>
-                                        <Image alt="" src={'/cdn/1672571525533E7H_PJmUUAYiKKz.jpg'} layout="fill" />
+                                        <Image alt="" src={'/cdn/members/' + member.image} layout="fill" />
                                     </div>
                                     <div className={styles.memberInfo}>
                                         <span>{member.name}</span>
@@ -93,13 +93,22 @@ const About = () => {
                         <span>Revolving Loan Fund</span>
                         <Seperator />
                     </div>
+                    <div>
+                        <span>revolving loan fund // WIP</span>
+                    </div>
                     <div className={styles.title} id='committees'>
                         <span>Committees</span>
                         <Seperator />
                     </div>
+                    <div>
+                        <span>committees // WIP</span>
+                    </div>
                     <div className={styles.title} id='history'>
                         <span>History of SADC</span>
                         <Seperator />
+                    </div>
+                    <div>
+                        <span>history of sadc // WIP</span>
                     </div>
                 </div>
             </div>

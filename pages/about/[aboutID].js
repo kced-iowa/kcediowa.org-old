@@ -10,6 +10,8 @@ import { MdEmail } from 'react-icons/md';
 import { AiFillPhone } from 'react-icons/ai';
 import { FaGlobe } from 'react-icons/fa';
 
+const api = process.env.NEXT_PUBLIC_APIBASE
+
 function AboutPage() {
     
     const router = useRouter()
@@ -19,7 +21,7 @@ function AboutPage() {
     useEffect(() => {
         const fetchAbout = () => {
             axios
-            .get('https://api.horsaen.com/members/' + aboutID)
+            .get(api + '/members/' + aboutID)
             .then((res) => {
                 setAbout(res.data)
             })
@@ -45,7 +47,7 @@ function AboutPage() {
                     <div className={styles.titleTextContainer}>
                         <span className={styles.title}>{about.name}</span>
                         <span className={styles.titlePosition}>{about.occupation}</span>
-                        <span className={styles.titleDate}>Since | 1970</span>
+                        <span className={styles.titleDate}>Since | {about.join}</span>
                     </div>
                 </div>
                 <div className={styles.contactContainer}>

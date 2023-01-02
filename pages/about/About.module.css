@@ -1,9 +1,17 @@
 .about {
     min-height: 100vh;
 }
+.sidebar {
+    position: fixed;
+    left: 50px;
+}
+.sidebar ul {
+    list-style: none;
+    line-height: 30px;
+}
 .container {
     padding-top: 10vh;
-    padding-left: 25vw;
+    padding-left: 20vw;
 }
 .title {
     height: 100px;
@@ -56,4 +64,10 @@
 }
 .subtitle {
     font-size: .75rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 }

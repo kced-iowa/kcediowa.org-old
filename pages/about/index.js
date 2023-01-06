@@ -7,7 +7,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
-import history from './historyData'
+import history from './historyData.json'
 import styles from './About.module.css';
 import { BsCode } from 'react-icons/bs';
 const api = process.env.NEXT_PUBLIC_APIBASE

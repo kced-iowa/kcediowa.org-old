@@ -18,9 +18,9 @@
     padding-left: 20vw;
 }
 .title {
-    min-height: 100px;
     width: 300px;
     font-size: 3rem;
+    padding-bottom: 50px;
 }
 .text {
     padding-left: 20px;
@@ -69,9 +69,26 @@
 .subtitle {
     font-size: .75rem;
 }
-
-@media (max-width: 768px) {
+@media (max-width: 810px) {
     .sidebar {
         display: none;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 15px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        display: none;
+    }
+    .title { 
+        padding-bottom: 10px;
+    }
+    .text {
+        width: fit-content;
     }
 }

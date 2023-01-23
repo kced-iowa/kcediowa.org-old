@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -11,6 +11,18 @@ import { AiFillPhone } from 'react-icons/ai';
 import { FaGlobe } from 'react-icons/fa';
 
 const api = process.env.NEXT_PUBLIC_APIBASE
+
+const test = [
+    {
+        icon: <MdEmail />
+    },
+    {
+        icon: <AiFillPhone />
+    },
+    {
+        icon: <FaGlobe />
+    }
+]
 
 function AboutPage() {
     
@@ -57,6 +69,14 @@ function AboutPage() {
                 </div>
                 <div className={styles.aboutText}>
                     <span>{about.bio}</span>
+                    {test.map((data) => {
+                        return (
+                            <div key=''>
+                                <span onClick={()=>console.log(data.icon)}>test</span>
+                                {data.icon}
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>

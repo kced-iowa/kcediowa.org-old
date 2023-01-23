@@ -12,6 +12,8 @@ import { BsGlobe2 } from 'react-icons/bs';
 import { AiFillFacebook } from 'react-icons/ai';
 import { AiFillInstagram } from 'react-icons/ai';
 
+const api = process.env.NEXT_PUBLIC_APIBASE
+
 function Business() {
     const [business, setBusiness] = useState([]);
     useEffect(() => {
@@ -19,7 +21,7 @@ function Business() {
     }, []);
     const fetchBusiness = () => {
         axios
-        .get('https://api.horsaen.com/business')
+        .get(api + '/business')
         .then((res) => {
             console.log(res.data);
             setBusiness(res.data);
@@ -50,7 +52,7 @@ function Business() {
                     {business.map((business) =>
                         <div className={styles.card} key={business.id}>
                             <div className={styles.cardImage}>
-                                <Image alt="business picture" src={'/cdn/businesses/' + business.coverimg} layout="fill"/>
+                                <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>
                             </div>
                             <div className={styles.cardSeperator}></div>
                             <div className={styles.cardContent}>
@@ -62,7 +64,7 @@ function Business() {
                                 </div>
                                 <div className={styles.cardInfo}>
                                     <div className={styles.cardAbout}>
-                                        <span>eqwerewr  qwerqwherkjkjh lkjhfasdufiasdifuhsjas dfasef asef efsdf sdf asdfasdfk</span>
+                                        <span>{business.bio}</span>
                                     </div>
                                     <div className={styles.cardIcons}>
                                         <a href="https://facebook.com">

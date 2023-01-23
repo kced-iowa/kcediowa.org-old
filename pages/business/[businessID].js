@@ -11,6 +11,8 @@ import { FaMapMarkerAlt, FaGlobe, FaFacebookSquare, FaTwitterSquare, FaInstagram
 import { MdEmail } from 'react-icons/md';
 import axios from 'axios';
 
+const api = process.env.NEXT_PUBLIC_APIBASE
+
 function BusinessPage() {
 
     const router = useRouter();
@@ -20,7 +22,7 @@ function BusinessPage() {
     useEffect(() =>{
         const fetchBusiness = () => {
             axios
-            .get('https://api.horsaen.com/business/' + businessID)
+            .get(api + '/business/' + businessID)
             .then((res) => {
                 console.log(res.data);
                 setBusiness(res.data)
@@ -81,7 +83,7 @@ function BusinessPage() {
                 </div>
                 <div className={styles.sideContainer}>
                     <div className={styles.sideImage}>
-                        <Image alt="" src={'/cdn/businesses/' + business.mainimg} layout="fill"/>
+                        <Image alt="" src={api + '/cdn/business/' + business.mainimg} layout="fill"/>
                     </div>
                     <div className={styles.sideText}>
                         <span>

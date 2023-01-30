@@ -33,6 +33,11 @@ function BusinessPage() {
         }
         fetchBusiness();
     }, [businessID])
+    if (business.instagram !== undefined || '') {
+        var ingrarhsd = 0
+    } else {
+        var ingrarhsd = 1
+    }
     return (
         <div>
             <div>
@@ -50,12 +55,17 @@ function BusinessPage() {
                 </div>
                 <div className={styles.linkContainer}>
                     <span><FaMapMarkerAlt />Maps</span>
-                    <a href="tel:6416222326"><AiFillPhone />Phone</a>
-                    <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a>
+                    <a href={'tel:' + business.phone}><AiFillPhone />Phone</a>
+                    <a href={business.website}><FaGlobe />Website</a>
                     <div className={styles.linkSocials}>
-                        <a href="https://"><FaInstagramSquare /></a>
-                        <a href="https://"><FaFacebookSquare /></a>
+                        {business.facebook
+                        == "" ? <span>true</span>
+                        : <span>false</span>
+                        }
+                        {business.instagram == undefined || "" ? '' : <a href={business.instagram}><FaInstagramSquare /></a>}
+                        {business.facebook == undefined || "" ? '' : <a href={business.facebook}><FaFacebookSquare /></a>}
                         <a href=""><FaTwitterSquare /></a>
+                        <span onClick={() => console.log(ingrarhsd)}>click</span>
                     </div>
                 </div>
                 <div className={styles.contacts}>
@@ -86,9 +96,7 @@ function BusinessPage() {
                         <Image alt="" src={api + '/cdn/business/' + business.mainimg} layout="fill"/>
                     </div>
                     <div className={styles.sideText}>
-                        <span>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                        </span>
+                        <span>{business.bio}</span>
                     </div>
                 </div>
             </div>

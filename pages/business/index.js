@@ -66,17 +66,6 @@ function Business() {
                                     <div className={styles.cardAbout}>
                                         <span>{business.bio}</span>
                                     </div>
-                                    <div className={styles.cardIcons}>
-                                        <a href="https://facebook.com">
-                                            <span><AiFillFacebook /></span>
-                                        </a>
-                                        <a href="https://instagram.com">
-                                            <span><AiFillInstagram /></span>
-                                        </a>
-                                        <a href="https://sigourney.com">
-                                            <span><BsGlobe2 /></span>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                             <Link href={"/business/" + business._id}>

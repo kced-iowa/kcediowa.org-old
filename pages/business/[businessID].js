@@ -93,7 +93,7 @@ function BusinessPage() {
                                 <div className={styles.cardLinks}>
                                     <a href={"mailto:" + contact.email}><MdEmail />Email</a>
                                     <a href={"tel:" + contact.number}><AiFillPhone />Phone</a>
-                                    <a href={contact.website}><FaGlobe />Website</a>
+                                    <a target='_blank' rel="noreferrer" href={contact.website}><FaGlobe />Website</a>
                                 </div> 
                             </div>
                         </div>

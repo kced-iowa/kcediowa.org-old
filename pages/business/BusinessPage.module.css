@@ -78,6 +78,11 @@
 }
 .cardTitle {
     font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+.position {
+    color: #272727;
 }
 .cardLinks {
     position: absolute;

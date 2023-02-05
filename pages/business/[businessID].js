@@ -16,23 +16,28 @@ const api = process.env.NEXT_PUBLIC_APIBASE
 function BusinessPage() {
 
     const router = useRouter();
-    const { businessID } = router.query
-    
-    const [business, setBusiness] = useState([])
+    const [business, setBusiness] = useState({})
+    // need to declare this as its own thing otherwise nextjs throws a fit and won't even access the values of the objects, super janky, fix eventually ???
+    const [contact, setContact] = useState({})
     useEffect(() =>{
+        const { businessID } = router.query
+        console.log(businessID)
         const fetchBusiness = () => {
             axios
             .get(api + '/business/' + businessID)
             .then((res) => {
                 console.log(res.data);
                 setBusiness(res.data)
+                setContact(res.data.contact)
             })
             .catch((err) => {
                 console.log(err)
             })
         }
-        fetchBusiness();
-    }, [businessID])
+        if(router.isReady){
+            fetchBusiness();
+        }
+    }, [router.isReady, router.query])
     if (business.instagram !== undefined || '') {
         var ingrarhsd = 0
     } else {
@@ -54,8 +59,8 @@ function BusinessPage() {
                     </div>
                 </div>
                 <div className={styles.linkContainer}>
-                    <span><FaMapMarkerAlt />Maps</span>
-                    <a href={'tel:' + business.phone}><AiFillPhone />Phone</a>
+                    <a href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a>
+                    <a href={'tel:' + business.number}><AiFillPhone />Phone</a>
                     <a href={business.website}><FaGlobe />Website</a>
                     <div className={styles.linkSocials}>
                         {business.facebook
@@ -72,20 +77,23 @@ function BusinessPage() {
                     <div className={styles.contactsTitle}>
                         <div className={styles.titleBar} />
                         <div className={styles.title}>
-                            <span>Contacts</span>
+                            <span onClick={()=> console.log(business)}>Contacts</span>
                         </div>
                     </div>
                     <div className={styles.contactsCards}>
                         <div className={styles.contactsCard}>
                             <div className={styles.cardImage}>
-                                <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill"/>
+                                <Image alt="" src={api + "/cdn/business/" + business.contactimg} layout="fill"/>
                             </div>
                             <div className={styles.cardContent}>
-                                <div className={styles.cardTitle}><span>Person Persoewrwern</span></div>
+                                <div className={styles.cardTitle}>
+                                    <span>{contact.name}</span>
+                                    <span className={styles.position}>{contact.position}</span>
+                                </div>
                                 <div className={styles.cardLinks}>
-                                    <a href="mailto:"><MdEmail />Email</a>
-                                    <a href="tel:6416222326"><AiFillPhone />Phone</a>
-                                    <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a>
+                                    <a href={"mailto:" + contact.email}><MdEmail />Email</a>
+                                    <a href={"tel:" + contact.number}><AiFillPhone />Phone</a>
+                                    <a href={contact.website}><FaGlobe />Website</a>
                                 </div> 
                             </div>
                         </div>

@@ -59,9 +59,9 @@ function BusinessPage() {
                     </div>
                 </div>
                 <div className={styles.linkContainer}>
-                    <a href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a>
-                    <a href={'tel:' + business.number}><AiFillPhone />Phone</a>
-                    <a href={business.website}><FaGlobe />Website</a>
+                    <a target="_blank" rel="noreferrer" href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a>
+                    <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />Phone</a>
+                    <a target="_blank" rel="noreferrer" href={business.website}><FaGlobe />Website</a>
                     <div className={styles.linkSocials}>
                         {business.facebook
                         == "" ? <span>true</span>
@@ -91,8 +91,8 @@ function BusinessPage() {
                                     <span className={styles.position}>{contact.position}</span>
                                 </div>
                                 <div className={styles.cardLinks}>
-                                    <a href={"mailto:" + contact.email}><MdEmail />Email</a>
-                                    <a href={"tel:" + contact.number}><AiFillPhone />Phone</a>
+                                    <a target="_blank" rel="noreferrer" href={"mailto:" + contact.email}><MdEmail />Email</a>
+                                    <a target="_blank" rel="noreferrer" href={"tel:" + contact.number}><AiFillPhone />Phone</a>
                                     <a target='_blank' rel="noreferrer" href={contact.website}><FaGlobe />Website</a>
                                 </div> 
                             </div>

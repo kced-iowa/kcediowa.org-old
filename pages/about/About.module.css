@@ -40,7 +40,7 @@
 .member {
     display: flex;
     padding: 15px;
-    min-width: 400px;
+    width: 400px;
 }
 .memberSidebar {
     cursor: pointer;
@@ -62,6 +62,7 @@
 .memberInfo {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: fit-content;
     height: 80px;

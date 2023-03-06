@@ -1,9 +1,32 @@
-.container {
+.navbar {
+    height: 40px;
+    width: 550px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 14px; 
-    width: 100%;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    border: solid #c7dde8;
+    border-width: 0 0 3px 3px;
+    border-radius: 0 0 0 10px;
+}
+.navbar a,
+.navbar span {
+    color: #000;
+}
+.navbar ul {
+    padding: 10px;
+    list-style: none;
+}
+.navbar ul li {
+    display: inline;
+}
+
+/* .container {
+    height: 14px;
+    width: 100vw;
     position: fixed;
     padding: 10px;
     box-sizing: border-box;
@@ -14,6 +37,7 @@
     color: #000;
 } 
 .ncontainer ul {
+    float: right;
     list-style: none;
 }
 .container ul li {
@@ -35,4 +59,4 @@
     .sadc {
         padding: none;
     }
-}
+} */

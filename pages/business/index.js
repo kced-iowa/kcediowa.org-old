@@ -50,29 +50,57 @@ function Business() {
                     </div>
                     <div className={styles.content}>
                     {business.map((business) =>
-                        <div className={styles.card} key={business.id}>
+                        // <div className={styles.card} key={business.id}>
+                        //     <div className={styles.cardImage}>
+                        //         <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>
+                        //     </div>
+                        //     <div className={styles.cardSeperator}></div>
+                        //     <div className={styles.cardContent}>
+                        //         <div>
+                        //             <div className={styles.cardTitle}>
+                        //                 <span>{business.name}</span>
+                        //             </div>
+                        //             <div className={styles.cardClass}>
+                        //                 <span>{business.type}</span>
+                        //             </div>
+                        //         </div>
+                        //         <div className={styles.cardInfo}>
+                        //             <div className={styles.cardAbout}>
+                        //                 <span>{business.bio}</span>
+                        //             </div>
+                        //         </div>
+                        //     </div>
+                        //     <Link href={"/business/" + business._id}>
+                        //         <div className={styles.cardButton}>
+                        //             <a><span>Learn More</span></a>
+                        //         </div>
+                        //     </Link>
+                        // </div>
+                        <div key={business.id} className={styles.card}>
                             <div className={styles.cardImage}>
                                 <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>
                             </div>
                             <div className={styles.cardSeperator}></div>
                             <div className={styles.cardContent}>
-                                <div className={styles.cardTitle}>
-                                    <span>{business.name}</span>
-                                </div>
-                                <div className={styles.cardClass}>
-                                    <span>{business.type}</span>
-                                </div>
-                                <div className={styles.cardInfo}>
-                                    <div className={styles.cardAbout}>
-                                        <span>{business.bio}</span>
+                                <div className={styles.cardHeader}>
+                                    <div className={styles.cardTitle}>
+                                        <span>{business.name}</span>
+                                    </div>
+                                    <div className={styles.cardClass}>
+                                        <span>{business.type}</span>
                                     </div>
                                 </div>
-                            </div>
-                            <Link href={"/business/" + business._id}>
-                                <div className={styles.cardButton}>
-                                    <a><span>Learn More</span></a>
+                                <div className={styles.cardAboutContainer}>
+                                    <span className={styles.cardAbout}>{business.bio}</span>
                                 </div>
-                            </Link>
+                            </div>
+                            <div className={styles.buttonContainer}>
+                                <Link href={"/business/" + business._id}>
+                                    <div className={styles.button}>
+                                        <span>Learn More</span>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     )}
                     </div>

@@ -101,7 +101,7 @@ function BusinessPage() {
                 </div>
                 <div className={styles.sideContainer}>
                     <div className={styles.sideImage}>
-                        <Image alt="" src={api + '/cdn/business/' + business.mainimg} layout="fill"/>
+                        <Image alt="" src={api + '/cdn/business/' + business.mainimg} layout="fill" />
                     </div>
                     <div className={styles.sideText}>
                         <span>{business.bio}</span>

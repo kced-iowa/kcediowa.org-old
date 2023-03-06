@@ -3,10 +3,7 @@ import styles from './Navbar.module.css';
 
 export default function Navbar() {
     return (
-        <div className={styles.container}>
-            <div className={styles.sadc}>
-                <Link href="/">SADC</Link>
-            </div>
+        <div className={styles.navbar}>
             <ul>
                 <li><Link href="/">Home</Link></li>
                 <span> | </span>

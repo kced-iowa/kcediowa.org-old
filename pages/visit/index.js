@@ -45,7 +45,7 @@ function Visit() {
                 <div className={styles.cardContainer} key={id}>
                     <Link href={"/visit" + link}>
                         <a className={styles.card}>
-                            <Image alt='' src={`${image}`} layout='fill' className={styles.cardBg}/>
+                            <Image alt='' src={`${image}`} layout='fill' className={styles.cardBg}  placeholder="blur"/>
                             <div className={styles.cardTitle}>
                                 <span>{name}</span>
                             </div>

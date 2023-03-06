@@ -76,7 +76,7 @@ const About = () => {
                                         <div className={styles.memberSidebar}>{'<'}</div>
                                     </Link>
                                     <div className={styles.memberImage}>
-                                        <Image alt="" src={api + '/cdn/members/' + member.image} layout="fill" />
+                                        <Image alt="" src={api + '/cdn/members/' + member.image} layout="fill"/>
                                     </div>
                                     <div className={styles.memberInfo}>
                                         <span>{member.name}</span>

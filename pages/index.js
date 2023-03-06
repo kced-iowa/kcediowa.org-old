@@ -22,13 +22,11 @@ function Home() {
   const adLink2 = 'https://google.com/'
 
   return (
-    <div>
+    <>
       <Head>
         <title>Home | SADC</title>
       </Head>
-      <div className={styles.landingNavbar}>
-        <Navbar />
-      </div>
+      <Navbar />
       <div className={styles.landing}>
         <div className={styles.landingText}>
           <span className={styles.landingTextTop}>&mdash; Welcome To &mdash;</span>
@@ -43,13 +41,13 @@ function Home() {
             </div>
             <div className={styles.ads}>
               <a href={adLink0} target="_blank" rel="noopener noreferrer">
-                <Image alt="blablablabla" src={adImage0} width="120px" height="120px"/>
+                <Image alt="blablablabla" src={adImage0} width="120px" height="120px" />
               </a>
               <a href={adLink1} target="_blank" rel="noopener noreferrer">
-                <Image alt="blablablabla" src={adImage1} width="120px" height="120px"/>
+                <Image alt="blablablabla" src={adImage1} width="120px" height="120px" />
               </a>
               <a href={adLink2} target="_blank" rel="noopener noreferrer">
-                <Image alt="blablablabla" src={adImage2} width="120px" height="120px"/>
+                <Image alt="blablablabla" src={adImage2} width="120px" height="120px" />
               </a>
             </div>
           </div>
@@ -104,7 +102,7 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

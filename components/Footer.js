@@ -17,8 +17,8 @@ export default function Footer() {
             <div className={styles.content} style={{alignItems: 'center'}}>
                 <a href="https://admin.sigourney.com">Console</a>
                 <div className={styles.iconContainer}>
-                    <a className={styles.icon} href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
-                    <a className={styles.icon} href="https://www.instagram.com/sadc_52591/"><AiFillInstagram /></a>
+                    <a className={styles.icon} target="_blank" rel="noreferrer" href="https://www.facebook.com/Sigourney-Area-Development-Corp-1480675282182185"><AiFillFacebook /></a>
+                    <a className={styles.icon} target="_blank" rel="noreferrer" href="https://www.instagram.com/sadc_52591/"><AiFillInstagram /></a>
                 </div>
             </div>
         </div>

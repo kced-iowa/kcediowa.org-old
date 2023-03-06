@@ -54,7 +54,7 @@ function AboutPage() {
                 <div className={styles.titleContainer}>
                     <div className={styles.sidebar} />
                     <div className={styles.imageContainer}>
-                        <Image alt="" src={api + '/cdn/members/' + about.image} layout="fill"/>
+                        <Image alt="" src={api + '/cdn/members/' + about.image} layout="fill" />
                     </div>
                     <div className={styles.titleTextContainer}>
                         <span className={styles.title}>{about.name}</span>

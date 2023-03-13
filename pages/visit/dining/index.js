@@ -25,7 +25,7 @@ function Dining() {
                 <div className={styles.cardContainer}>
                     <div className={styles.card}>
                         <div className={styles.cardImage}>
-                            <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill"  placeholder="blur"/>
+                            <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill" />
                         </div>
                         <div className={styles.cardSeperator} />
                         <div className={styles.cardContent}>

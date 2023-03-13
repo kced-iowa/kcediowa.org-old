@@ -24,7 +24,7 @@ function Visit() {
         {
             id: 3,
             link: "/landmarks",
-            image: "/../public/City.jpg",
+            image: "/City.jpg",
             name: "Landmarks"
         }
     ];
@@ -45,7 +45,7 @@ function Visit() {
                 <div className={styles.cardContainer} key={id}>
                     <Link href={"/visit" + link}>
                         <a className={styles.card}>
-                            <Image alt='' src={`${image}`} layout='fill' className={styles.cardBg}  placeholder="blur"/>
+                            <Image alt='' src={`${image}`} layout='fill' className={styles.cardBg} />
                             <div className={styles.cardTitle}>
                                 <span>{name}</span>
                             </div>

@@ -55,8 +55,8 @@
 }
 .memberImage {
     position: relative;
-    height: 80px;
-    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
     margin-right: 5px;
 }
 .memberInfo {

@@ -38,16 +38,18 @@
 }
 .details {
     height: 175px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: absolute;
     bottom: 10px;
-    padding-right: 10px;
 }
 .forms {
     display: flex;
+    align-items: center;
     justify-content: center;
+    width: 300px;
 }
 .formButton {
     cursor: pointer;
@@ -58,5 +60,9 @@
     height: 40px;
     border-radius: 10px;
     background-color: #000;
+    color: #fff;
+}
+.formButton a {
+    text-decoration: none;
     color: #fff;
 }

@@ -52,7 +52,11 @@ function Events() {
                             <div className={styles.date}>
                                 <span className={styles.int}>{event.dd}</span>
                                 <span>{event.mm}</span>
-                                <span>9:40 - 8:60</span>
+                                <div>
+                                  <span>{event.timestart}</span>
+                                  <span> - </span>
+                                  <span>{event.timeend}</span>
+                                </div>
                             </div>
                             <div className={styles.details}>
                                 <div className={styles.desc}>

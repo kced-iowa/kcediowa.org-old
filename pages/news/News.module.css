@@ -37,7 +37,7 @@
 }
 .cardButton {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     width: inherit;
     height: 80px;
     display: flex;

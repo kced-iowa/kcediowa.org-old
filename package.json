@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@meilisearch/instant-meilisearch": "^0.8.1",
+    "algoliasearch": "^4.16.0",
     "axios": "^0.27.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
@@ -22,6 +23,7 @@
     "react-icons": "^4.4.0",
     "react-instantsearch-dom": "^6.30.3",
     "sharp": "^0.31.3",
+    "swr": "^2.1.1",
     "typescript": "^4.9.5"
   },
   "devDependencies": {

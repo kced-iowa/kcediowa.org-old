@@ -17,7 +17,7 @@ const key = api + '/events'
 
 function EventCard (props) {
     return (
-        <div className={styles.card}>
+        <div className={styles.card} key={props.key}>
             <div className={styles.cardHeader}>
                 <div className={styles.type}>
                     <span>{props.title}</span>
@@ -66,6 +66,7 @@ function Events() {
                 <div className={styles.content}>
                 {data && data.map((event)=> (
                     <EventCard
+                        key={event._id}
                         title={event.title}
                         dd={event.dd}
                         mm={event.mm}

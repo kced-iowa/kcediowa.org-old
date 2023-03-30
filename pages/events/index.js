@@ -17,7 +17,8 @@ const key = api + '/events'
 
 function EventCard (props) {
     return (
-        <div className={styles.card} key={props.key}>
+        // still gives key error, what ???????
+        <div key={props.key} className={styles.card}>
             <div className={styles.cardHeader}>
                 <div className={styles.type}>
                     <span>{props.title}</span>

@@ -10,7 +10,7 @@ export default function Footer() {
                 <span>Made with {'<3'} by <a href="https://horsaen.com" target="_blank" rel="noopener noreferrer">Cameron W</a></span>
             </div>
             <div className={styles.content}>
-                <span>© 2022 Sigourney Area Development Corporation</span>
+                <span>© 2022 Keokuk County Development Corporation</span>
                 <span>112 East Washington Street • Sigourney, IA 52591-1445 • 641.622.2288</span>
                 <a href="mailto:sadc@sigourney.com">sadc@sigourney.com</a>
             </div>

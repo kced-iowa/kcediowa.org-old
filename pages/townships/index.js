@@ -5,8 +5,6 @@ import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
 import styles from './Orgs.module.css';
 
-import { AiFillPhone } from 'react-icons/ai';
-import {  FaGlobe, FaFacebookSquare } from 'react-icons/fa';
 function Orgs() {
     return (
         <div>
@@ -17,7 +15,7 @@ function Orgs() {
             <div className={styles.page}>
                 <div className={styles.container}>
                     <div className={styles.title}>
-                        <span>Clubs & Organizations</span>
+                        <span>A place to grow</span>
                         <Seperator />
                     </div>
                 </div>
@@ -29,15 +27,9 @@ function Orgs() {
                         <div className={styles.cardSeperator} />
                         <div className={styles.cardContent}>
                             <div className={styles.cardTitle}>
-                                <span>Chinese Language Learning</span>
-                            </div>
-                            <div className={styles.cardDesc}>
-                                <span>Learn Chinese with experienced teachers.</span>
+                                <span>Sigourney</span>
                             </div>
                             <div className={styles.cardInfo}>
-                                <span><AiFillPhone /> <a href="#">Phone</a></span>
-                                <span><FaGlobe /> <a href="#">Website</a></span>
-                                <span><FaFacebookSquare /> <a href="#">Facebook</a></span>
                             </div>
                         </div>
                     </div>

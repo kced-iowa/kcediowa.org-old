@@ -1,0 +1,15 @@
+.page {
+    min-height: 100vh;
+}
+.title {
+    padding-top: 10vh;
+    padding-left: 25vw;
+    height: 100px;
+    width: 300px;
+    font-size: 3rem;
+}
+.content {
+    padding-top: 50px;
+    height: 50vh;
+    margin: 0 3rem;
+}

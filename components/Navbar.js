@@ -15,9 +15,13 @@ export default function Navbar() {
                 <span> | </span>
                 <li><Link href="/news">News</Link></li>
                 <span> | </span>
-                <li><Link href="/orgs">Clubs & Organizations</Link></li>
+                <li><Link href="/townships">Live here</Link></li>
                 <span> | </span>
-                <li><Link href="/visit">Visit</Link></li>
+                <li><Link href="/recreation">Play Here</Link></li>
+                <span> | </span>
+                <li><Link href="/participate">Participate</Link></li>
+                <span> | </span>
+                <li><Link href="/resources">Resources</Link></li>
             </ul>
         </div>
     );

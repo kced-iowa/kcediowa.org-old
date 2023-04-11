@@ -1,6 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react'
+
+import axios from 'axios'
+import useSWR from 'swr'
+
+const api = process.env.NEXT_PUBLIC_APIBASE
+const fetcher = url => axios.get(url).then(res => res.data)
+var key = api + '/backgrounds'
 
 import Navbar from '/components/Navbar';
 import Footer from '/components/Footer';
@@ -11,6 +19,9 @@ import { IoBusinessOutline } from 'react-icons/io5';
 import { BsFillPinMapFill } from 'react-icons/bs'
 
 function Home() {
+
+  const { data, error, isLoading } = useSWR(key, fetcher)
+
   // declare ad images - replace with api sooner or later
   const adImage0 = 'https://upload.wikimedia.org/wikipedia/commons/6/62/Solid_red.svg';
   const adImage1 = 'https://upload.wikimedia.org/wikipedia/commons/2/29/Solid_green.svg';
@@ -21,16 +32,25 @@ function Home() {
   const adLink1 = 'https://google.com/'
   const adLink2 = 'https://google.com/'
 
+  // 'http://localhost:5000/cdn/news/City.jpg'
+
   return (
     <>
       <Head>
-        <title>Home | SADC</title>
+        <title>Home | KCED</title>
       </Head>
       <Navbar />
+      <div className={styles.bg}>
+        {!isLoading ?
+        <Image
+          src={api + '/cdn/backgrounds/' + data[0].file}
+          layout='fill'
+        /> : null}
+      </div>
       <div className={styles.landing}>
         <div className={styles.landingText}>
           <span className={styles.landingTextTop}>&mdash; Welcome To &mdash;</span>
-          <span className={styles.landingTextBottom}>Sigourney Area Development Corporation</span>
+          <span className={styles.landingTextBottom}>Keokuk County Economic Development</span>
         </div>
         <div className={styles.sideContainer}>
           <div className={styles.couplingContainer}>

@@ -56,7 +56,7 @@ function Events() {
     return (
         <div>
             <Head>
-                <title>Events | SADC</title>
+                <title>Events | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

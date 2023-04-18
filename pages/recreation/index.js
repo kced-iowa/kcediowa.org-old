@@ -31,7 +31,7 @@ function Visit() {
     return (
         <div>
             <Head>
-                <title>Visit | SADC</title>
+                <title>Visit | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

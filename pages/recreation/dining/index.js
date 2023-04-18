@@ -12,7 +12,7 @@ function Dining() {
     return (
         <div>
             <Head>
-                <title>Dining | SADC</title>
+                <title>Dining | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

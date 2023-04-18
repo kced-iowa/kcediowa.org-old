@@ -41,7 +41,7 @@ const About = () => {
     return (
         <div>
             <Head>
-                <title>About | SADC</title>
+                <title>About | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.about}>

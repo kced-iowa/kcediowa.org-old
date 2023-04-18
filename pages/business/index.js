@@ -33,7 +33,7 @@ function Business() {
     return (
         <div>
             <Head>
-                <title>Business Directory | SADC</title>
+                <title>Business Directory | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.business}>

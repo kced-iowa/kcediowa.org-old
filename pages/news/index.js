@@ -38,7 +38,7 @@ function News() {
     return (
         <div>
             <Head>
-                <title>News | SADC</title>
+                <title>News | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

@@ -24,7 +24,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>Home | SADC</title>
+        <title>Home | KCED</title>
       </Head>
       <Navbar />
       <div className={styles.landing}>

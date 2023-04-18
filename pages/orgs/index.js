@@ -11,7 +11,7 @@ function Orgs() {
     return (
         <div>
             <Head>
-                <title>Clubs & Organizations | SADC</title>
+                <title>Clubs & Organizations | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

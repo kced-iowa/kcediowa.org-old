@@ -9,7 +9,7 @@ function Orgs() {
     return (
         <div>
             <Head>
-                <title>Clubs & Organizations | KCED</title>
+                <title>Live Here | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

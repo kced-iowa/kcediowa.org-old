@@ -20,10 +20,12 @@
 .card {
     position: relative;
     flex-wrap: unset;
-    height: 400px;
+    height: 230px;
     width: 300px;
     border: 2px solid #000;
     border-radius: 8px;
+    text-decoration: none;
+    color: #000;
 }
 .cardImage {
     position: relative;
@@ -47,14 +49,6 @@
 }
 .cardTitle {
     font-size: 30px;
-}
-.cardDesc {
-    padding-top: 5px;
-}
-.cardInfo {
-    position: absolute;
-    bottom: 5px;
-    font-size: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }

@@ -1,11 +1,38 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
-import styles from './Orgs.module.css';
+import axios from 'axios'
+import useSWR from 'swr'
+import styles from './Townships.module.css';
+
+const api = process.env.NEXT_PUBLIC_APIBASE
+
+const fetcher = url => axios.get(url).then(res => res.data)
+var key = api + '/townships'
+
+function TownCard (props) {
+    return (
+        <Link href={'/townships/' + props.id}>
+        <a className={styles.card} >
+            <div className={styles.cardImage}>
+                <Image alt="" src={api + '/cdn/townships/' + props.coverImg} layout="fill" />
+            </div>
+            <div className={styles.cardSeperator} />
+            <div className={styles.cardContent}>
+                <div className={styles.cardTitle}>
+                    <span>{props.name}</span>
+                </div>
+            </div>
+        </a>
+        </Link>
+    )
+}
 
 function Orgs() {
+    const { data, error } = useSWR(key, fetcher)
     return (
         <div>
             <Head>
@@ -20,19 +47,14 @@ function Orgs() {
                     </div>
                 </div>
                 <div className={styles.content}>
-                    <div className={styles.card}>
-                        <div className={styles.cardImage}>
-                            <Image alt="" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GpuviZ2dkD_w9tP198SLeQHaHa%26pid%3DApi&f=1" layout="fill" />
-                        </div>
-                        <div className={styles.cardSeperator} />
-                        <div className={styles.cardContent}>
-                            <div className={styles.cardTitle}>
-                                <span>Sigourney</span>
-                            </div>
-                            <div className={styles.cardInfo}>
-                            </div>
-                        </div>
-                    </div>
+                {data && data.map((town) => (
+                    <TownCard
+                        key={town._id}
+                        id={town._id}
+                        name={town.name}
+                        coverImg={town.coverImg}
+                    />
+                ))}
                 </div>
             </div>
             <Footer />

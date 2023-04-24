@@ -15,7 +15,7 @@ export default function Navbar() {
                 <span> | </span>
                 <li><Link href="/news">News</Link></li>
                 <span> | </span>
-                <li><Link href="/townships">Live here</Link></li>
+                <li><Link href="/townships">Live Here</Link></li>
                 <span> | </span>
                 <li><Link href="/recreation">Play Here</Link></li>
                 <span> | </span>

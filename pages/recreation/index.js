@@ -37,7 +37,7 @@ export default function Recreation() {
     return (
         <div>
             <Head>
-                <title>Live Here | KCED</title>
+                <title>Play Here | KCED</title>
             </Head>
             <Navbar />
             <div className={styles.page}>

@@ -9,7 +9,12 @@
     font-size: 3rem;
 }
 .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 50px;
     height: 50vh;
     margin: 0 3rem;
+}
+.content form {
+    border: 1px solid #000;
 }

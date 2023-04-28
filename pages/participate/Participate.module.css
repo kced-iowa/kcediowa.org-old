@@ -1,3 +1,52 @@
+/* .confirmed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 325px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #c7dde8;
+    background-color: #8f8f8f;
+} */
+.confirmed {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.confirmed div {
+    position: relative;
+    height: 400px;
+    width: 325px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #c7dde8;
+    background-color: #8f8f8f;
+    cursor: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.confirmed div span:nth-child(1) {
+    color: rgb(32, 245, 32);
+    font-size: 50px;
+}
+.confirmed div button {
+    all: unset;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    border: 2px solid #000;
+}
 .page {
     min-height: 100vh;
 }
@@ -12,9 +61,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 50px;
-    height: 50vh;
     margin: 0 3rem;
 }
-.content form {
-    border: 1px solid #000;
+.formDiv,
+.formInput {
+    display: flex;
+    flex-direction: column;
+}
+.formInput input {
+    all: unset;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #3f3f3f;
 }

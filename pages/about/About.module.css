@@ -70,7 +70,12 @@
 .subtitle {
     font-size: .75rem;
 }
-@media (max-width: 810px) {
+@media (max-width: 1348px) {
+    .sidebar {
+        left: 0;
+    }
+}
+@media (max-width: 1086px) {
     .sidebar {
         display: none;
     }

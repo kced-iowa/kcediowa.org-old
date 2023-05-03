@@ -26,6 +26,7 @@
     border-radius: 8px;
     text-decoration: none;
     color: #000;
+    overflow: hidden;
 }
 .cardImage {
     position: relative;

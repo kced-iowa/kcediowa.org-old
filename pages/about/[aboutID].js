@@ -44,6 +44,10 @@ function AboutPage() {
         fetchAbout()
     }, [aboutID])
     return (
+        <>
+        <Head>
+            <title>{about.name + " | KCED"}</title>
+        </Head>
         <div className={styles.page}>
             <div>
                 <Link href='/about'>
@@ -57,29 +61,31 @@ function AboutPage() {
                         <Image alt="" src={api + '/cdn/members/' + about.image} layout="fill" />
                     </div>
                     <div className={styles.titleTextContainer}>
-                        <span className={styles.title}>{about.name}</span>
+                        <span onClick={()=>console.log(about)} className={styles.title}>{about.name}</span>
                         <span className={styles.titlePosition}>{about.occupation}</span>
                         <span className={styles.titleDate}>Since | {about.join}</span>
                     </div>
                 </div>
                 <div className={styles.contactContainer}>
-                    <a href="mailto:"><MdEmail />Email</a>
-                    <a href="tel:6416222326"><AiFillPhone />Phone</a>
-                    <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a>
+                    {about.email ? <a href="mailto:"><MdEmail />Email</a> : null}
+                    {about.phone ? <a href="tel:6416222326"><AiFillPhone />Phone</a> : null }
+                    {about.website ? <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a> : null }
+                    
                 </div>
                 <div className={styles.aboutText}>
                     <span>{about.bio}</span>
-                    {test.map((data) => {
+                    {/* {test.map((data) => {
                         return (
                             <div key=''>
                                 <span onClick={()=>console.log(data.icon)}>test</span>
                                 {data.icon}
                             </div>
                         )
-                    })}
+                    })} */}
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

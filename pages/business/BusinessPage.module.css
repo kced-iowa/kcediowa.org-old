@@ -62,6 +62,7 @@
     padding-left: 30px;
 }
 .contactsCard {
+    overflow: hidden;
     position: relative;
     height: 300px;
     width: 225px;

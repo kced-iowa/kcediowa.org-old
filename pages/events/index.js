@@ -41,11 +41,13 @@ function EventCard (props) {
                     <span><FaMapMarkerAlt /></span>
                     <span>{props.address}</span> 
                 </div>
-                <div className={styles.forms}>
-                    <div className={styles.formButton}>
-                        <a rel="noreferrer" target="_blank" href={props.rsvp}>{props.rsvp}</a>
+                {props.rsvp ? 
+                    <div className={styles.forms}>
+                        <div className={styles.formButton}>
+                            <a rel="noreferrer" target="_blank" href={'mailto:' + props.rsvp}>{props.rsvp}</a>
+                        </div>
                     </div>
-                </div>
+                : null }
             </div>
         </div>
     )

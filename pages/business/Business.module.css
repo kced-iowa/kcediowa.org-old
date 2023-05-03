@@ -64,16 +64,16 @@
 .cardContent {
     position: relative;
     padding: 5px;
-    height: 185px;
+    height: fit-content;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.cardHeader {
+/* .cardHeader {
     position: absolute;
     top: 0;
-}
+} */
 .cardTitle {
     font-size: 25px;
 }
@@ -89,6 +89,8 @@
     -webkit-line-clamp: 3;
 }
 .buttonContainer {
+    position: absolute;
+    bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +100,8 @@
 }
 .button {
     background-color: #000;
-    color: #c7dde8;
+    /* color: #c7dde8; */
+    color: #fff;
     width: 250px;
     height: 40px;
     display: flex;

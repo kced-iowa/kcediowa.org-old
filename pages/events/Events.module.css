@@ -29,11 +29,10 @@
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-bottom: 30px;
 }
-.int {
-    font-size: 85px;
+.bold {
+    font-weight: 700;
 }
 .details {
     height: 175px;

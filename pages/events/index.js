@@ -16,31 +16,33 @@ const fetcher = url => axios.get(url).then(res => res.data)
 const key = api + '/events'
 
 function EventCard (props) {
+
+    const start = new Date(Date.parse(props.start))
+    const end = new Date(Date.parse(props.end))
+
     return (
-        // still gives key error, what ???????
-        <div key={props.key} className={styles.card}>
+        <div className={styles.card}>
             <div className={styles.cardHeader}>
                 <div className={styles.type}>
                     <span>{props.title}</span>
                 </div>
             </div>
             <div className={styles.date}>
-                <span className={styles.int}>{props.dd}</span>
-                <span>{props.mm}</span>
-                <div>
-                    <span>{props.timestart}</span>
-                    <span> - </span>
-                    <span>{props.timeend}</span>
-                </div>
+                <span className={styles.bold}>From</span>
+                <span>{start.toLocaleString()}</span>
+                <span className={styles.bold}>To</span>
+                <span>{end.toLocaleString()}</span>
             </div>
             <div className={styles.details}>
                 <div className={styles.desc}>
                     <span>{props.desc}</span>
                 </div>
-                <div className={styles.address}>
-                    <span><FaMapMarkerAlt /></span>
-                    <span>{props.address}</span> 
-                </div>
+                {props.address ?
+                    <div className={styles.address}>
+                        <span><FaMapMarkerAlt /></span>
+                        <span>{props.address}</span> 
+                    </div>
+                : null }
                 {props.rsvp ? 
                     <div className={styles.forms}>
                         <div className={styles.formButton}>
@@ -67,14 +69,12 @@ function Events() {
                     <Seperator />
                 </div>
                 <div className={styles.content}>
-                {data && data.map((event)=> (
+                {data && data.map((event, i)=> (
                     <EventCard
-                        key={event._id}
+                        key={i}
                         title={event.title}
-                        dd={event.dd}
-                        mm={event.mm}
-                        timestart={event.timestart}
-                        timeend={event.timeend}
+                        start={event.start}
+                        end={event.end}
                         desc={event.desc}
                         address={event.address}
                         rsvp={event.rsvp}

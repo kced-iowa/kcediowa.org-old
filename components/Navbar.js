@@ -21,8 +21,8 @@ export default function Navbar() {
                     <li><Link href="/recreation">Play Here</Link></li>
                     <span> | </span>
                     <li><Link href="/participate">Participate</Link></li>
-                    <span> | </span>
-                    <li><Link href="/resources">Resources</Link></li>
+                    {/* <span> | </span>
+                    <li><Link href="/resources">Resources</Link></li> */}
                 </ul>
             </div>
             <div className={styles.mobileNav}>
@@ -39,7 +39,7 @@ export default function Navbar() {
                             <li><Link href="/townships">Live Here</Link></li>
                             <li><Link href="/recreation">Play Here</Link></li>
                             <li><Link href="/participate">Participate</Link></li>
-                            <li><Link href="/resources">Resources</Link></li>
+                            {/* <li><Link href="/resources">Resources</Link></li> */}
                         </ul>
                     </div>
                 </div>

@@ -12,11 +12,20 @@ const api = process.env.NEXT_PUBLIC_APIBASE
 const fetcher = url => axios.get(url).then(res => res.data)
 var key = api + '/news'
 
+const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+}
+
 function NewsCard (props) {
+    const date = new Date(props.date)
     return (
         <div className={styles.card}>
             <div className={styles.cardDate}>
-                <span>{props.author + " | " + props.date}</span> 
+                <span>{props.author + " | " + date.toLocaleString([], options)}</span> 
             </div>
             <div className={styles.cardHeader}>
                 <span>{props.title}</span>
@@ -24,11 +33,13 @@ function NewsCard (props) {
             <div className={styles.cardText}>
                 <span>{props.metadata}</span>
             </div>
-            <a rel='noreferrer' target='_blank' href={api + "/cdn/news/" + props.file}>
-                <div className={styles.cardButton}>
-                    <a><span>Learn More</span></a>
-                </div>
-            </a>
+            {props.file ?
+                <a rel='noreferrer' target='_blank' href={api + "/cdn/news/" + props.file}>
+                    <div className={styles.cardButton}>
+                        <a><span>Learn More</span></a>
+                    </div>
+                </a>
+            : null }
         </div>
         )
 }

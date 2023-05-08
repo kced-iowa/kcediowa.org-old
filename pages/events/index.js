@@ -15,6 +15,14 @@ const api = process.env.NEXT_PUBLIC_APIBASE
 const fetcher = url => axios.get(url).then(res => res.data)
 const key = api + '/events'
 
+const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+}
+
 function EventCard (props) {
 
     const start = new Date(Date.parse(props.start))
@@ -29,9 +37,9 @@ function EventCard (props) {
             </div>
             <div className={styles.date}>
                 <span className={styles.bold}>From</span>
-                <span>{start.toLocaleString()}</span>
+                <span>{start.toLocaleString([], options)}</span>
                 <span className={styles.bold}>To</span>
-                <span>{end.toLocaleString()}</span>
+                <span>{end.toLocaleString([], options)}</span>
             </div>
             <div className={styles.details}>
                 <div className={styles.desc}>
@@ -40,7 +48,7 @@ function EventCard (props) {
                 {props.address ?
                     <div className={styles.address}>
                         <span><FaMapMarkerAlt /></span>
-                        <span>{props.address}</span> 
+                        <a rel='noreferrer' target='_blank' href={"https://www.google.com/maps/place/" + props.address}>{props.address}</a> 
                     </div>
                 : null }
                 {props.rsvp ? 

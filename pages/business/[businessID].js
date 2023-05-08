@@ -14,19 +14,16 @@ import axios from 'axios';
 const api = process.env.NEXT_PUBLIC_APIBASE
 
 function BusinessPage() {
-
     const router = useRouter();
     const [business, setBusiness] = useState({})
     // need to declare this as its own thing otherwise nextjs throws a fit and won't even access the values of the objects, super janky, fix eventually ???
     const [contact, setContact] = useState({})
     useEffect(() =>{
         const { businessID } = router.query
-        console.log(businessID)
         const fetchBusiness = () => {
             axios
             .get(api + '/business/' + businessID)
             .then((res) => {
-                console.log(res.data);
                 setBusiness(res.data)
                 setContact(res.data.contact)
             })
@@ -38,11 +35,6 @@ function BusinessPage() {
             fetchBusiness();
         }
     }, [router.isReady, router.query])
-    if (business.instagram !== undefined || '') {
-        var ingrarhsd = 0
-    } else {
-        var ingrarhsd = 1
-    }
     return (
         <div>
             <div>
@@ -50,7 +42,7 @@ function BusinessPage() {
                     <a><span>{'< Return'}</span></a>
                 </Link>
             </div>
-            <div className={styles.page} key=''>
+            <div className={styles.page}>
                 <div className={styles.titleContainer}>
                     <div className={styles.titleBar} />
                     <div className={styles.titleContent}>
@@ -59,46 +51,45 @@ function BusinessPage() {
                     </div>
                 </div>
                 <div className={styles.linkContainer}>
-                    <a target="_blank" rel="noreferrer" href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a>
-                    <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />Phone</a>
-                    <a target="_blank" rel="noreferrer" href={business.website}><FaGlobe />Website</a>
+                    {/* could this be iterated ? */}
+                    {business.address ? <a target="_blank" rel="noreferrer" href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a> : null }
+                    {business.phone ? <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />Phone</a> : null }
+                    {business.website ? <a target="_blank" rel="noreferrer" href={business.website}><FaGlobe />Website</a> : null}
                     <div className={styles.linkSocials}>
-                        {business.facebook
-                        == "" ? <span>true</span>
-                        : <span>false</span>
-                        }
-                        {business.instagram == undefined || "" ? '' : <a href={business.instagram}><FaInstagramSquare /></a>}
-                        {business.facebook == undefined || "" ? '' : <a href={business.facebook}><FaFacebookSquare /></a>}
-                        <a href=""><FaTwitterSquare /></a>
-                        <span onClick={() => console.log(ingrarhsd)}>click</span>
+                        {/* finish this later */}
+                        {business.instagram ? <a href={business.instagram}><FaInstagramSquare /></a> : null}
+                        {business.facebook ? <a href={business.facebook}><FaFacebookSquare /></a> : null}
+                        {/* <a href=""><FaTwitterSquare /></a> */}
                     </div>
                 </div>
-                <div className={styles.contacts}>
-                    <div className={styles.contactsTitle}>
-                        <div className={styles.titleBar} />
-                        <div className={styles.title}>
-                            <span onClick={()=> console.log(business)}>Contacts</span>
-                        </div>
-                    </div>
-                    <div className={styles.contactsCards}>
-                        <div className={styles.contactsCard}>
-                            <div className={styles.cardImage}>
-                                <Image alt="" src={api + "/cdn/business/" + business.contactimg} layout="fill"/>
+                {contact ? 
+                    <div className={styles.contacts}>
+                        <div className={styles.contactsTitle}>
+                            <div className={styles.titleBar} />
+                            <div className={styles.title}>
+                                <span>Contacts</span>
                             </div>
-                            <div className={styles.cardContent}>
-                                <div className={styles.cardTitle}>
-                                    <span>{contact.name}</span>
-                                    <span className={styles.position}>{contact.position}</span>
+                        </div>
+                        <div className={styles.contactsCards}>
+                            <div className={styles.contactsCard}>
+                                <div className={styles.cardImage}>
+                                    <Image alt="" src={api + "/cdn/business/" + business.contactimg} layout="fill"/>
                                 </div>
-                                <div className={styles.cardLinks}>
-                                    <a target="_blank" rel="noreferrer" href={"mailto:" + contact.email}><MdEmail />Email</a>
-                                    <a target="_blank" rel="noreferrer" href={"tel:" + contact.number}><AiFillPhone />Phone</a>
-                                    <a target='_blank' rel="noreferrer" href={contact.website}><FaGlobe />Website</a>
-                                </div> 
+                                <div className={styles.cardContent}>
+                                    <div className={styles.cardTitle}>
+                                        {contact.name ? <span>{contact.name}</span> : <span>No name provided</span>}
+                                        <span className={styles.position}>{contact.position}</span>
+                                    </div>
+                                    <div className={styles.cardLinks}>
+                                        {contact.email ? <a target="_blank" rel="noreferrer" href={"mailto:" + contact.email}><MdEmail />Email</a> : null }
+                                        {contact.number ? <a target="_blank" rel="noreferrer" href={"tel:" + contact.number}><AiFillPhone />Phone</a> : null }
+                                        {contact.website ? <a target='_blank' rel="noreferrer" href={contact.website}><FaGlobe />Website</a> : null }
+                                    </div> 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                : null }
                 <div className={styles.sideContainer}>
                     <div className={styles.sideImage}>
                         <Image alt="" src={api + '/cdn/business/' + business.mainimg} layout="fill" />

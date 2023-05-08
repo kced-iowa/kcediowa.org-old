@@ -18,38 +18,46 @@ export default function Participate () {
     const submitForm = (e) => {
         e.preventDefault()
         if (form == 'business') {
-            const business = {
-                type: "business",
-                name: e.target.businessName.value,
-                address: e.target.businessAddress.value,
-                contactName: e.target.businessContactName.value,
-                contactEmail: e.target.businessContactEmail.value,
-                phone: e.target.businessContactPhone.value,
-                website: e.target.businessWebsite.value,
-                twitter: e.target.businessTwitter.value,
-                instagram: e.target.businessInstagram.value
-            }
-            axios
-            .post(api + '/memberships', business)
-            .then((res) => {
-                if (res.status == 201) {
-                    setConfirmed(true)
+            if (!e.target.businessName.value == '') {
+                const business = {
+                    type: "business",
+                    name: e.target.businessName.value,
+                    address: e.target.businessAddress.value,
+                    contactName: e.target.businessContactName.value,
+                    contactEmail: e.target.businessContactEmail.value,
+                    phone: e.target.businessContactPhone.value,
+                    website: e.target.businessWebsite.value,
+                    twitter: e.target.businessTwitter.value,
+                    instagram: e.target.businessInstagram.value
                 }
-            })
+                axios
+                .post(api + '/memberships', business)
+                .then((res) => {
+                    if (res.status == 201) {
+                        setConfirmed(true)
+                    }
+                })
+            } else {
+                alert("Please enter a business name.")
+            }
         } else {
-            const individual = {
-                type: "individual",
-                name: e.target.individualName.value,
-                address: e.target.individualAddress.value,
-                phone: e.target.individualPhone.value
-            }
-            axios
-            .post(api + '/memberships', individual)
-            .then((res) => {
-                if (res.status == 201) {
-                    setConfirmed(true)
+            if (!e.target.individualName.value == '') {
+                const individual = {
+                    type: "individual",
+                    name: e.target.individualName.value,
+                    address: e.target.individualAddress.value,
+                    phone: e.target.individualPhone.value
                 }
-            })
+                axios
+                .post(api + '/memberships', individual)
+                .then((res) => {
+                    if (res.status == 201) {
+                        setConfirmed(true)
+                    }
+                })
+            } else {
+                alert("Please enter a name.")
+            }
         }
     }
 
@@ -104,7 +112,7 @@ export default function Participate () {
                             <input id="individualPhone" placeholder='Phone' />
                         </div>
                     </div>
-                    <div>
+                    <div className={styles.buttons}>
                         <button type='submit'>Submit</button>
                         <button type='reset' onClick={()=>setForm('business')}>Reset</button>
                     </div>

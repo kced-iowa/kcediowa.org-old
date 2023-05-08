@@ -75,6 +75,14 @@
     padding: 10px;
     border: 2px solid #3f3f3f;
 }
+.buttons button {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 5px;
+}
 @media (max-width: 768px ) {
     .title {
         padding-left: 10px;

@@ -42,6 +42,9 @@
     position: absolute;
     bottom: 10px;
 }
+.details a {
+    color: #000;
+}
 .forms {
     width: 300px;
 }

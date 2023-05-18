@@ -16,19 +16,19 @@ function SocialContainer (props) {
         case 'twitter':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillTwitterSquare /></span>{props.type}</a>
+                    <a rel='noreferrer' target='_blank' href={"https://twitter.com/" + props.user}><span><AiFillTwitterSquare /></span></a>
                 </div>
             )
         case 'instagram':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillInstagram /></span>{props.type}</a>
+                    <a rel='noreferrer' target='_blank' href={"https://instagram.com/" + props.user}><span><AiFillInstagram /></span></a>
                 </div>
             )
         case 'facebook':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillFacebook /></span>{props.type}</a>
+                    <a rel='noreferrer' target='_blank' href={"https://facebook.com/" + props.user}><span><AiFillFacebook /></span></a>
                 </div>
             )
         case '':

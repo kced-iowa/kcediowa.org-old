@@ -6,16 +6,48 @@ import Link from 'next/link';
 import Footer from '/components/Footer';
 import styles from './BusinessPage.module.css';
 
-import { AiFillPhone } from 'react-icons/ai';
+import { AiFillTwitterSquare, AiFillInstagram, AiFillFacebook, AiFillPhone, AiOutlineLink } from 'react-icons/ai'
 import { FaMapMarkerAlt, FaGlobe, FaFacebookSquare, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import axios from 'axios';
 
 const api = process.env.NEXT_PUBLIC_APIBASE
 
+function SocialContainer (props) {
+    switch (props.type) {
+        case 'twitter':
+            return (
+                <div className={styles.socialLink} >
+                    <a rel='noreferrer' target='_blank' href={"https://twitter.com/" + props.user}><span><AiFillTwitterSquare /></span></a>
+                </div>
+            )
+        case 'instagram':
+            return (
+                <div className={styles.socialLink} >
+                    <a rel='noreferrer' target='_blank' href={"https://instagram.com/" + props.user}><span><AiFillInstagram /></span></a>
+                </div>
+            )
+        case 'facebook':
+            return (
+                <div className={styles.socialLink} >
+                    <a rel='noreferrer' target='_blank' href={"https://facebook.com/" + props.user}><span><AiFillFacebook /></span></a>
+                </div>
+            )
+        case '':
+            return null
+        default:
+            return (
+                <div className={styles.socialLink} >
+                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiOutlineLink /></span>Other</a>
+                </div>
+            )
+    }
+}
+
 function BusinessPage() {
     const router = useRouter();
     const [business, setBusiness] = useState({})
+    const [socialData, setSocialData] = useState('')
     // need to declare this as its own thing otherwise nextjs throws a fit and won't even access the values of the objects, super janky, fix eventually ???
     const [contact, setContact] = useState({})
     useEffect(() =>{
@@ -25,6 +57,7 @@ function BusinessPage() {
             .get(api + '/business/' + businessID)
             .then((res) => {
                 setBusiness(res.data)
+                setSocialData(res.data.socials)
                 setContact(res.data.contact)
             })
             .catch((err) => {
@@ -37,6 +70,9 @@ function BusinessPage() {
     }, [router.isReady, router.query])
     return (
         <div>
+            <Head>
+                <title>{business?.name}</title>
+            </Head>
             <div>
                 <Link href='/business'>
                     <a><span>{'< Return'}</span></a>
@@ -56,10 +92,9 @@ function BusinessPage() {
                     {business.phone ? <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />Phone</a> : null }
                     {business.website ? <a target="_blank" rel="noreferrer" href={business.website}><FaGlobe />Website</a> : null}
                     <div className={styles.linkSocials}>
-                        {/* finish this later */}
-                        {business.instagram ? <a href={business.instagram}><FaInstagramSquare /></a> : null}
-                        {business.facebook ? <a href={business.facebook}><FaFacebookSquare /></a> : null}
-                        {/* <a href=""><FaTwitterSquare /></a> */}
+                        {socialData && socialData.map((data) => 
+                            <SocialContainer type={data.type} user={data.user} />
+                        )}
                     </div>
                 </div>
                 {contact ? 

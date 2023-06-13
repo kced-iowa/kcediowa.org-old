@@ -67,10 +67,9 @@ function AboutPage() {
                     </div>
                 </div>
                 <div className={styles.contactContainer}>
-                    {about.email ? <a href="mailto:"><MdEmail />Email</a> : null}
-                    {about.phone ? <a href="tel:6416222326"><AiFillPhone />Phone</a> : null }
-                    {about.website ? <a href="https://www.caseys.com/general-store/ia-sigourney/100-e-jackson-st/3396?y_source=1_MTcyMDU1MjItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"><FaGlobe />Website</a> : null }
-                    
+                    {about.email ? <a href={"mailto:" + about.email}><MdEmail />Email</a> : null}
+                    {about.phone ? <a href={"tel:" + about.phone}><AiFillPhone />{about.phone}</a> : null }
+                    {about.website ? <a href={about.website}><FaGlobe />Website</a> : null }
                 </div>
                 <div className={styles.aboutText}>
                     <span>{about.bio}</span>

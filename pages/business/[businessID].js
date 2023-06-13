@@ -88,8 +88,8 @@ function BusinessPage() {
                 </div>
                 <div className={styles.linkContainer}>
                     {/* could this be iterated ? */}
-                    {business.address ? <a target="_blank" rel="noreferrer" href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />Maps</a> : null }
-                    {business.phone ? <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />Phone</a> : null }
+                    {business.address ? <a target="_blank" rel="noreferrer" href={'https://www.google.com/maps/place/' + business.address}><FaMapMarkerAlt />{business.address}</a> : null }
+                    {business.phone ? <a target="_blank" rel="noreferrer" href={'tel:' + business.phone}><AiFillPhone />{business.phone}</a> : null }
                     {business.website ? <a target="_blank" rel="noreferrer" href={business.website}><FaGlobe />Website</a> : null}
                     <div className={styles.linkSocials}>
                         {socialData && socialData.map((data) => 
@@ -117,7 +117,7 @@ function BusinessPage() {
                                     </div>
                                     <div className={styles.cardLinks}>
                                         {contact.email ? <a target="_blank" rel="noreferrer" href={"mailto:" + contact.email}><MdEmail />Email</a> : null }
-                                        {contact.number ? <a target="_blank" rel="noreferrer" href={"tel:" + contact.number}><AiFillPhone />Phone</a> : null }
+                                        {contact.number ? <a target="_blank" rel="noreferrer" href={"tel:" + contact.number}><AiFillPhone />{contact.number}</a> : null }
                                         {contact.website ? <a target='_blank' rel="noreferrer" href={contact.website}><FaGlobe />Website</a> : null }
                                     </div> 
                                 </div>

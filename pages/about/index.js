@@ -73,11 +73,13 @@ const About = () => {
                             {members.map((member) =>
                                 <div className={styles.member} key={member.id}>
                                     <Link href={'/about/' + member._id}>
-                                        <div className={styles.memberSidebar}>{'<'}</div>
+                                        <div className={styles.memberLink}>
+                                            <div className={styles.memberSidebar}>{'<'}</div>
+                                            <div className={styles.memberImage}>
+                                                <Image alt="" src={api + '/cdn/members/' + member.image} layout="fill"/>
+                                            </div>
+                                        </div>
                                     </Link>
-                                    <div className={styles.memberImage}>
-                                        <Image alt="" src={api + '/cdn/members/' + member.image} layout="fill"/>
-                                    </div>
                                     <div className={styles.memberInfo}>
                                         <span>{member.name}</span>
                                         <span>{member.occupation}</span>

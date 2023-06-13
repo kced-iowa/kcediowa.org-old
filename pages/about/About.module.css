@@ -42,8 +42,11 @@
     padding: 15px;
     width: 400px;
 }
-.memberSidebar {
+.memberLink {
+    display: flex;
     cursor: pointer;
+}
+.memberSidebar {
     display: flex;
     align-items: center;
     justify-content: center;

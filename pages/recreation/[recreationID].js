@@ -9,6 +9,7 @@ import styles from './RecreationPage.module.css'
 const api = process.env.NEXT_PUBLIC_APIBASE
 
 import { AiFillTwitterSquare, AiFillInstagram, AiFillFacebook, AiOutlineLink } from 'react-icons/ai'
+import { FaMapMarkerAlt, FaGlobe } from "react-icons/fa"
 
 function SocialContainer (props) {
     switch (props.type) {
@@ -83,8 +84,8 @@ export default function RecreationPage () {
                 </div>
                 <div className={styles.content}>
                     <div className={styles.links}>
-                        <a rel='noreferrer' target='_blank' href={data.url}>Website</a>
-                        <a rel='noreferrer' target='_blank' href={'https://www.google.com/maps/place/' + data.mapsAddress}>Maps</a>
+                        {data.mapsAddress ? <a rel='noreferrer' target='_blank' href={'https://www.google.com/maps/place/' + data.mapsAddress}><FaMapMarkerAlt />{data.mapsAddress}</a> : null }
+                        {data.url ? <a rel='noreferrer' target='_blank' href={data.url}><FaGlobe />Website</a> : null }
                         {socialData && socialData.map((data) => 
                             <SocialContainer type={data.type} user={data.user} />
                         )}

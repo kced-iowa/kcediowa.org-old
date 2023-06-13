@@ -51,6 +51,11 @@ function EventCard (props) {
                         <a rel='noreferrer' target='_blank' href={"https://www.google.com/maps/place/" + props.address}>{props.address}</a> 
                     </div>
                 : null }
+                {props.link ?
+                    <div>
+                        <a rel="noreferrer" target="_blank" href={props.link}>Learn More</a>
+                    </div>
+                : null }
                 {props.rsvp ? 
                     <div className={styles.forms}>
                         <div className={styles.formButton}>
@@ -86,6 +91,7 @@ function Events() {
                         desc={event.desc}
                         address={event.address}
                         rsvp={event.rsvp}
+                        link={event.link}
                     />
                 ))}
                 </div>

@@ -30,6 +30,7 @@ function Business() {
             console.log(err)
         })
     }
+    const [searchQuery, setSearchQuery] = useState('');
     return (
         <div>
             <Head>
@@ -44,12 +45,14 @@ function Business() {
                         </div>
                         <div className={styles.search}>
                             <form>
-                                <input className={styles.searchInput} placeholder="Search" />
+                                <input className={styles.searchInput} placeholder="Search" onChange={(e) => setSearchQuery(e.target.value)} />
                             </form>
                         </div>
                     </div>
                     <div className={styles.content}>
-                    {business.map((business) =>
+                    {business.filter((business) => {
+                        return searchQuery.toLowerCase() === '' ? business : business.name.toLowerCase().includes(searchQuery.toLowerCase()) || business.type.toLowerCase().includes(searchQuery.toLowerCase())
+                    }).map((business) =>
                         // <div className={styles.card} key={business.id}>
                         //     <div className={styles.cardImage}>
                         //         <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>

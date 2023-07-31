@@ -73,11 +73,6 @@ function BusinessPage() {
             <Head>
                 <title>{business?.name}</title>
             </Head>
-            <div>
-                <Link href='/business'>
-                    <a><span>{'< Return'}</span></a>
-                </Link>
-            </div>
             <div className={styles.page}>
                 <div className={styles.titleContainer}>
                     <div className={styles.titleBar} />

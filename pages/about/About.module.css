@@ -79,8 +79,15 @@
     }
 }
 @media (max-width: 1086px) {
+    .container {
+        padding-left: 50px;
+        padding-top: 30px;
+    }
     .sidebar {
         display: none;
+    }
+    .list {
+        width: 100vw;
     }
 }
 @media (max-width: 768px) {

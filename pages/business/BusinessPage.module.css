@@ -19,7 +19,9 @@
     font-size: 48px;
 }
 .titleContent {
-    width: 425px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
 }
 .titleType {
     padding-left: 5px;

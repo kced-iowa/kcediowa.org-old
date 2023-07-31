@@ -4,6 +4,7 @@ import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
 import useSWR from 'swr'
+import { useState } from 'react'
 import axios from 'axios'
 import styles from './News.module.css';
 
@@ -70,6 +71,7 @@ function News() {
                         ))}
                     </div>
                 </div>
+                {data && data.length == 0 ? <span className={styles.noNews}>{"No news :("}</span> : null }
             </div>
             <Footer />
         </div>

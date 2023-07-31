@@ -110,6 +110,21 @@
     cursor: pointer;
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    .titleContainer {
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+    .title {
+        width: auto;
+        padding: 0;
+    }
+    .search {
+        padding: 0;
+    }
+}
+
 /* .cardContent {
     height: 190px;
     padding: 5px;

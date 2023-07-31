@@ -32,8 +32,6 @@ function Home() {
   const adLink1 = 'https://google.com/'
   const adLink2 = 'https://google.com/'
 
-  // 'http://localhost:5000/cdn/news/City.jpg'
-
   return (
     <>
       <Head>

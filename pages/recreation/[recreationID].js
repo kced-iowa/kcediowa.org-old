@@ -16,19 +16,19 @@ function SocialContainer (props) {
         case 'twitter':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillTwitterSquare /></span></a>
+                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillTwitterSquare /> Twitter</span></a>
                 </div>
             )
         case 'instagram':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillInstagram /></span></a>
+                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillInstagram /> Instagram</span></a>
                 </div>
             )
         case 'facebook':
             return (
                 <div className={styles.socialLink} >
-                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillFacebook /></span></a>
+                    <a rel='noreferrer' target='_blank' href={props.user}><span><AiFillFacebook /> Facebook</span></a>
                 </div>
             )
         case '':
@@ -93,14 +93,18 @@ export default function RecreationPage () {
                     <div className={styles.imageContainer}>
                         <Image src={image} layout='fill' />
                     </div>
-                    <div className={styles.aboutContainer}>
-                        <span className={styles.aboutTitle}>Activities</span>
-                        <span>{data.activities}</span>
-                    </div>
-                    <div className={styles.aboutContainer}>
-                        <span className={styles.aboutTitle}>History</span>
-                        <span>{data.history}</span>
-                    </div>
+                    {data.activities ? 
+                        <div className={styles.aboutContainer}>
+                            <span className={styles.aboutTitle}>Activities</span>
+                            <span>{data.activities}</span>
+                        </div>
+                    : null }
+                    {data.history ?
+                        <div className={styles.aboutContainer}>
+                            <span className={styles.aboutTitle}>History</span>
+                            <span>{data.history}</span>
+                        </div>
+                    : null }
                 </div>
             </main>
         </>

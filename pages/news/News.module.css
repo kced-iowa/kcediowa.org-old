@@ -62,3 +62,8 @@
 .cardButton span {
     font-size: 14px;
 }
+.noNews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

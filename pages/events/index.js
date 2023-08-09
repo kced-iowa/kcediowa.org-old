@@ -68,7 +68,7 @@ function EventCard (props) {
     )
 }
 
-function Events() {
+export default function Events() {
     const { data, error } = useSWR(key, fetcher)
     return (
         <div>
@@ -100,5 +100,3 @@ function Events() {
         </div>
     )
 }
-
-export default Events;

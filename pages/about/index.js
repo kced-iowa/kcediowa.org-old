@@ -48,28 +48,30 @@ const About = () => {
                 <div className={styles.container}>
                     <div className={styles.sidebar}>
                         <ul>
-                            <li><AnchorLink href='#about'>About Us</AnchorLink></li>
+                            {about.map((about) =>
+                                <li key={about._id}><AnchorLink href={'#' + about._id}>{about.title}</AnchorLink></li>
+                            )}
                             <li><AnchorLink href='#members'>SADC Board Members</AnchorLink></li>
-                            <li><AnchorLink href='#loan'>Revolving Loan Fund</AnchorLink></li>
                             <li><AnchorLink href='#committees'>Committees</AnchorLink></li>
-                            <li><AnchorLink href='#history'>History of SADC</AnchorLink></li>
                         </ul>
                     </div>
+                    {about.map((about) =>
                     <div>
-                        <div className={styles.title} id='about'>
-                            <span>About Us</span>
+                        <div className={styles.title} id={about._id}>
+                            <span>{about.title}</span>
                             <Seperator />
                         </div>
                         <div className={styles.text}>
-                            {about.map((about) =>
-                                <span key={about.id}>{about.content}</span>
-                            )}
+                            <span key={about.id + 'z'}>{about.content.replace(/\\n/g, '\n')}</span>
                         </div>
-                        <div className={styles.title}>
+                    </div>
+                    )}
+                    <div>
+                        <div id='members' className={styles.title}>
                             <span>Members</span>
                             <Seperator />
                         </div>
-                        <div className={styles.list} id='members'>
+                        <div className={styles.list}>
                             {members.map((member) =>
                                 <div className={styles.member} key={member.id}>
                                     <Link href={'/about/' + member._id}>
@@ -89,29 +91,6 @@ const About = () => {
                             )}
                         </div>
                         <span className={styles.subtitle}>*non-voting members</span>
-                    </div>
-                    <div className={styles.title} id='loan'>
-                        <span>Revolving Loan Fund</span>
-                        <Seperator />
-                    </div>
-                    <div>
-                        <span>revolving loan fund // WIP</span>
-                    </div>
-                    <div className={styles.title} id='committees'>
-                        <span>Committees</span>
-                        <Seperator />
-                    </div>
-                    <div>
-                        <span>committees // WIP</span>
-                    </div>
-                    <div className={styles.title} id='history'>
-                        <span>History of SADC</span>
-                        <Seperator />
-                    </div>
-                    <div className={styles.text}>
-                        {history.map((history) => (
-                            <span key={history.id}>{history.data}</span>
-                        ))}
                     </div>
                 </div>
             </div>

@@ -125,8 +125,7 @@ function Abouts({about}) {
                 <span>{item.title}</span>
                 <Seperator />
             </div>
-            <div dangerouslySetInnerHTML={{ __html: item.contentHtml }} />
-            <span>EOL</span>
+            <div className={styles.text} dangerouslySetInnerHTML={{ __html: item.contentHtml }} />
           </>
         ))}
       </>

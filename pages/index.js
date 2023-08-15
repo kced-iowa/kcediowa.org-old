@@ -103,7 +103,7 @@ function Home() {
               </div>
               <div className={styles.link}>
                 <div>
-                  <Link href="/visit">
+                  <Link href="/townships">
                     <a>
                       <div>
                         <span className={styles.linkIcon}><BsFillPinMapFill /></span>

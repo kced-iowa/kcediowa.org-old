@@ -4,14 +4,19 @@ import Link from 'next/link';
 import Head from 'next/head';
 import axios from 'axios';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+import { remark } from 'remark'
+import html from 'remark-html'
+
 import Navbar from '/components/Navbar';
 import Seperator from '/components/Seperator';
 import Footer from '/components/Footer';
-import history from './historyData.json'
+
 import styles from './About.module.css';
-import { BsCode } from 'react-icons/bs';
+
 const api = process.env.NEXT_PUBLIC_APIBASE
-const About = () => {
+
+export default function About () {
     const [members, setMembers] = useState([]);
     const [about, setAbout] = useState([]);
     useEffect(() => {
@@ -38,6 +43,7 @@ const About = () => {
             console.log(err)
         })
     };
+
     return (
         <div>
             <Head>
@@ -55,7 +61,8 @@ const About = () => {
                             <li><AnchorLink href='#committees'>Committees</AnchorLink></li>
                         </ul>
                     </div>
-                    {about.map((about) =>
+                    <Abouts about={about}/>
+                    {/* {about.map((about) =>
                     <div>
                         <div className={styles.title} id={about._id}>
                             <span>{about.title}</span>
@@ -65,7 +72,7 @@ const About = () => {
                             <span key={about.id + 'z'}>{about.content.replace(/\\n/g, '\n')}</span>
                         </div>
                     </div>
-                    )}
+                    )} */}
                     <div>
                         <div id='members' className={styles.title}>
                             <span>Members</span>
@@ -99,4 +106,42 @@ const About = () => {
     );
 }
 
-export default About;
+function Abouts({about}) {
+    const [content, setContent] = useState([])
+    useEffect(() => {
+      const testing = async () => {
+        await parseAboutData({about})
+        .then((res) => {
+          setContent(res)
+        })
+      }
+      testing()
+    })
+    return (
+      <>
+        {content.map((item) => (
+          <>
+            <div className={styles.title} id={about._id}>
+                <span>{item.title}</span>
+                <Seperator />
+            </div>
+            <div dangerouslySetInnerHTML={{ __html: item.contentHtml }} />
+            <span>EOL</span>
+          </>
+        ))}
+      </>
+    )
+  }
+
+  async function parseAboutData({about}) {
+    const array = []
+    for await (const item of about) {
+      const md = item.content.replace(/\\n/g, '\n')
+      const content = await remark()
+        .use(html)
+        .process(md)
+      const contentHtml = content.toString()
+      array.push({_id: item._id,title: item.title, contentHtml})
+    }
+    return array
+  }

@@ -42,6 +42,7 @@ export default function Navbar() {
                             <li><Link href="/townships">Live Here</Link></li>
                             <li><Link href="/recreation">Play Here</Link></li>
                             <li><Link href="/participate">Participate</Link></li>
+                            <li><Image src='/banner.png' width={180} height={64} /> </li>
                             {/* <li><Link href="/resources">Resources</Link></li> */}
                         </ul>
                     </div>

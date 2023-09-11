@@ -31,6 +31,7 @@ function Business() {
         })
     }
     const [searchQuery, setSearchQuery] = useState('');
+    const [keywordQuery, setKeywordQuery] = useState('');
     return (
         <div>
             <Head>
@@ -44,41 +45,31 @@ function Business() {
                             <Seperator />
                         </div>
                         <div className={styles.search}>
-                            <form>
-                                <input className={styles.searchInput} placeholder="Search" onChange={(e) => setSearchQuery(e.target.value)} />
-                            </form>
+                            <div>
+                                <span>Name Search</span>
+                                <form>
+                                    <input className={styles.searchInput} placeholder="Search" onChange={(e) => setSearchQuery(e.target.value)} />
+                                </form>
+                            </div>
+                            <div>
+                                <span>Keyword Search</span>
+                                <form>
+                                    <input className={styles.searchInput} placeholder="Search" onChange={(e) => setKeywordQuery(e.target.value)} />
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div className={styles.content}>
                     {business.filter((business) => {
-                        return searchQuery.toLowerCase() === '' ? business : business.name.toLowerCase().includes(searchQuery.toLowerCase()) || business.type.toLowerCase().includes(searchQuery.toLowerCase())
+                        return(
+                            (searchQuery.toLowerCase() === '' || 
+                            business.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                            business.type.toLowerCase().includes(searchQuery.toLowerCase())) &&
+
+                            (keywordQuery.toLowerCase() === '' || 
+                            business.keywords.some(keyword => keyword.toLowerCase().includes(keywordQuery.toLowerCase())))
+                        )
                     }).map((business) =>
-                        // <div className={styles.card} key={business.id}>
-                        //     <div className={styles.cardImage}>
-                        //         <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>
-                        //     </div>
-                        //     <div className={styles.cardSeperator}></div>
-                        //     <div className={styles.cardContent}>
-                        //         <div>
-                        //             <div className={styles.cardTitle}>
-                        //                 <span>{business.name}</span>
-                        //             </div>
-                        //             <div className={styles.cardClass}>
-                        //                 <span>{business.type}</span>
-                        //             </div>
-                        //         </div>
-                        //         <div className={styles.cardInfo}>
-                        //             <div className={styles.cardAbout}>
-                        //                 <span>{business.bio}</span>
-                        //             </div>
-                        //         </div>
-                        //     </div>
-                        //     <Link href={"/business/" + business._id}>
-                        //         <div className={styles.cardButton}>
-                        //             <a><span>Learn More</span></a>
-                        //         </div>
-                        //     </Link>
-                        // </div>
                         <div key={business.id} className={styles.card}>
                             <div className={styles.cardImage}>
                                 <Image alt="business picture" src={api + '/cdn/business/' + business.coverimg} className={styles.test} layout="fill"/>

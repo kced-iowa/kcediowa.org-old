@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -21,6 +22,8 @@ export default function Navbar() {
                     <li><Link href="/recreation">Play Here</Link></li>
                     <span> | </span>
                     <li><Link href="/participate">Participate</Link></li>
+                    <span> | </span>
+                    <li><Image src='/banner.png' width={90} height={32} /></li> 
                     {/* <span> | </span>
                     <li><Link href="/resources">Resources</Link></li> */}
                 </ul>

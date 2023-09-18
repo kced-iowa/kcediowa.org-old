@@ -43,6 +43,7 @@ function Business() {
                         <div className={styles.title}>
                             <span>Business Directory</span>
                             <Seperator />
+                            <span>Want changes made to your business? <a href="https://forms.gle/9sMKJ8txwEmbYWTX6">Submit them here.</a></span>
                         </div>
                         <div className={styles.search}>
                             <div>

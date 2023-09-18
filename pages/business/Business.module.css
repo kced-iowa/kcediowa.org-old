@@ -12,6 +12,8 @@
 .title {
     height: 100px;
     width: 300px;
+}
+.title span:nth-child(1) {
     font-size: 3rem;
 }
 .search {

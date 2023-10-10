@@ -49,11 +49,6 @@ function AboutPage() {
             <title>{about.name + " | KCED"}</title>
         </Head>
         <div className={styles.page}>
-            <div>
-                <Link href='/about'>
-                    <a>{'< Return'}</a>
-                </Link>
-            </div>
             <div className={styles.content}>
                 <div className={styles.titleContainer}>
                     <div className={styles.sidebar} />

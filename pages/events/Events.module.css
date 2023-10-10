@@ -47,6 +47,52 @@
 .details a {
     color: #000;
 }
+.desc {
+    cursor: pointer;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.moreContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: #0000007c;
+    /* opacity: .75; */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.closeMore {
+    all: unset;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    right: 5px;
+    top: 0;
+}
+.more {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50vw;
+    padding: 10px;
+}
+.moreInfo {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
 .forms {
     width: 300px;
 }

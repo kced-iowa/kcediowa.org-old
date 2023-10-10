@@ -28,6 +28,8 @@ function EventCard (props) {
     const start = new Date(Date.parse(props.start))
     const end = new Date(Date.parse(props.end))
 
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <div className={styles.card}>
             <div className={styles.cardHeader}>
@@ -42,9 +44,18 @@ function EventCard (props) {
                 <span>{end.toLocaleString([], options)}</span>
             </div>
             <div className={styles.details}>
-                <div className={styles.desc}>
+                <div className={styles.desc} onClick={()=>setIsOpen(true)}>
                     <span>{props.desc}</span>
                 </div>
+                {isOpen ?
+                    <div className={styles.moreContainer}>
+                        <div className={styles.more}>
+                            <span onClick={()=>setIsOpen(false)} className={styles.closeMore}>X</span>
+                            <span className={styles.moreInfo}>More Info</span>
+                            <span>{props.desc}</span>
+                        </div>
+                    </div>
+                : null}
                 {props.address ?
                     <div className={styles.address}>
                         <span><FaMapMarkerAlt /></span>

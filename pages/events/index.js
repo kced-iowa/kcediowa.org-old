@@ -33,7 +33,7 @@ function EventCard (props) {
     return (
         <div className={styles.card}>
             <div className={styles.cardHeader}>
-                <div className={styles.type}>
+                <div onClick={()=>setIsOpen(true)} className={styles.type}>
                     <span>{props.title}</span>
                 </div>
             </div>
@@ -52,6 +52,7 @@ function EventCard (props) {
                         <div className={styles.more}>
                             <span onClick={()=>setIsOpen(false)} className={styles.closeMore}>X</span>
                             <span className={styles.moreInfo}>More Info</span>
+                            <span className={styles.moreTitle}>{props.title}</span>
                             <span>{props.desc}</span>
                         </div>
                     </div>

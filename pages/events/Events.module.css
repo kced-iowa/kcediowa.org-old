@@ -25,6 +25,10 @@
 }
 .type {
     font-size: 35px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 .date {
     padding-top: 10px;
@@ -91,7 +95,12 @@
 }
 .moreInfo {
     font-weight: 600;
+    font-size: 2rem;
+}
+.moreTitle {
     font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 0;
 }
 .forms {
     width: 300px;
